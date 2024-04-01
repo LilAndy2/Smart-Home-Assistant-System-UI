@@ -2,22 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: "Poppins", sans-serif; */
-}
-
-header {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 1005;
-    height: 80px;
-}
-
-header.h4 {
-    position: absolute;
-    left: 10%;
-    bottom: 1rem;
-    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Intro Screen */
