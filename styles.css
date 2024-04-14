@@ -43,3 +43,60 @@
     opacity: 0;
     transition: ease-in-out 0.5s;
 }
+/* Intro Screen */
+
+
+/* Sidebar */
+.danger-text {
+    color: #ff7014;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    color: #000000;
+}
+
+.material-symbols-sharp {
+    color: #000000;
+}
+
+aside {
+    height: 100vh;
+}
+
+aside .top {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .logo-container {
+    display: flex;
+    gap: 0.8rem;
+}
+
+aside .logo-container img {
+    width: 2rem;
+    height: 2rem;
+}
+
+aside .close {
+    display: none;
+}
+/* Sidebar */
+
+
+/* Main Screen */
+.container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8 rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+/* Main Screen */
