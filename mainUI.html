@@ -20,6 +20,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!-- CLOCK -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     </head>
 
     <body>
@@ -92,14 +94,22 @@
             <main> 
                 <h1>Dashboard</h1>
 
-                <div class = "date">
-                    <input type = "date">
-                </div>
+                <div class = "basic-data">
+                    <div class = "time">
+                        <span class="material-symbols-sharp">schedule</span>
+                        <h1 id = "date-time"></h1>
 
-                <div class = "insights">
-                    
+                        <script src = "time.js" type = "text/javascript"></script>
+                    </div>
+
+                    <div class = "weather">
+                        <span class="material-symbols-sharp">wb_sunny</span>
+                        <h1 id = "weather-irl"></h1>
+
+                        <script src = "weather.js" type = "text/javascript"></script>
                 </div>
             </main>
+            <!---------------------- END OF MAIN ---------------------->
         </div>
 
     </body>
