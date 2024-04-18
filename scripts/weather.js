@@ -1,24 +1,30 @@
-const findMyLocation = (city) => {
-   navigator.geolocation.getCurrentPosition((position) => {
-      const latitude = position.coords.latitude;
-      const longitude = position.coords.longitude;
-      
-      const geoApiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
-      
-      fetch(geoApiUrl)
-         .then(response => response.json())
-         .then(data => {
-            const city = data.city;
-            //const country = data.countryName;
-
-            return city;
-         });
+const findMyLocation = () => {
+   return new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition((position) => {
+         const latitude = position.coords.latitude;
+         const longitude = position.coords.longitude;
+         
+         const geoApiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
+         
+         fetch(geoApiUrl)
+            .then(response => response.json())
+            .then(data => {
+               const city = data.city;
+               resolve(city); // Resolve with the city
+            })
+            .catch(error => reject(error)); // Handle any errors
+      });
    });
 }
 
-function getWeather() {
-   const apiKey = 'ee1aa6e9d08dee66b09552db3be2cf8a';
-   const city = findMyLocation();
+async function getWeather() {
+   const apiKey = `2cf94bc780975008cd2a907a522bc24a`;
+   const city = await findMyLocation();
+
+   if (!city) {
+      alert('Please enter a city');
+      return;
+   }
 
    const currentWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
    const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
@@ -29,8 +35,8 @@ function getWeather() {
          displayWeather(data);
       })
       .catch(error => {
-         console.log('Error:', error);
-         alert('Errorwith your data');
+         console.error('Error:', error);
+         alert('Error with your data');
       });
 
    fetch(forecastURL)
@@ -39,7 +45,7 @@ function getWeather() {
          displayHourlyForecast(data.list);
       })
       .catch(error => {
-         console.log('Error:', error);
+         console.error('Error:', error);
          alert('Error with your data');
       });
 }
