@@ -174,4 +174,24 @@ aside .sidebar .message-count {
     grid-template-columns: 14rem auto 23rem;
     background: lightgray;
 }
+
+#weather-icon {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px;
+    margin-bottom: 0;
+    display: none;
+}
+
+#weather-info {
+    font-size: 20px;
+}
+
+#hourly-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+}
 /* Main Screen */
