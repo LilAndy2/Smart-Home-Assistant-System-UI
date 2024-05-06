@@ -94,7 +94,7 @@
             <main> 
                 <h1>Dashboard</h1>
 
-                <div class = "basic-data">
+                <!--<div class = "basic-data">
                     <div class = "time">
                         <span class="material-symbols-sharp">schedule</span>
                         <h1 id = "date-time"></h1>
@@ -115,8 +115,23 @@
 
                         <div id = "hourly-forecast"></div>
 
-                        <script src = "./scripts/weather.js"></script>
-                </div>
+                        <script src="./scripts/weather.js"></script>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                getWeather(); // Call getWeather function when the DOM content is loaded
+                            });
+                        </script>
+                    </div>
+                </div>-->
+
+                <section class="live-time-container">
+                    <h2>Live Time</h2>
+                    <div id="live-time-clock"></div>
+                    <div id="live-day"></div>
+                    <div id="live-date"></div>
+                </section>
+
+                <script src="./scripts/time.js"></script>
             </main>
             <!---------------------- END OF MAIN ---------------------->
         </div>

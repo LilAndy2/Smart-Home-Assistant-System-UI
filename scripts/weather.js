@@ -1,24 +1,54 @@
+// const findMyLocation = () => {
+//    return new Promise((resolve, reject) => {
+//       navigator.geolocation.getCurrentPosition((position) => {
+//          const latitude = position.coords.latitude;
+//          const longitude = position.coords.longitude;
+         
+//          const geoApiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
+         
+//          fetch(geoApiUrl)
+//             .then(response => response.json())
+//             .then(data => {
+//                const city = data.city;
+//                resolve(city); // Resolve with the city
+//             })
+//             .catch(error => reject(error)); // Handle any errors
+//       });
+//    });
+// }
+
 const findMyLocation = () => {
    return new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition((position) => {
-         const latitude = position.coords.latitude;
-         const longitude = position.coords.longitude;
-         
-         const geoApiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
-         
-         fetch(geoApiUrl)
-            .then(response => response.json())
-            .then(data => {
-               const city = data.city;
-               resolve(city); // Resolve with the city
-            })
-            .catch(error => reject(error)); // Handle any errors
-      });
+       navigator.geolocation.getCurrentPosition(
+           (position) => {
+               const latitude = position.coords.latitude;
+               const longitude = position.coords.longitude;
+
+               const geoApiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
+
+               fetch(geoApiUrl)
+                   .then(response => {
+                       if (!response.ok) {
+                           throw new Error('Unable to retrieve location data');
+                       }
+                       return response.json();
+                   })
+                   .then(data => {
+                       const city = data.city;
+                       resolve(city); // Resolve with the city
+                   })
+                   .catch(error => reject(error)); // Handle any errors
+           },
+           (error) => {
+               reject(error.message); // Handle geolocation errors
+           }
+       );
    });
 }
 
+
 async function getWeather() {
-   const apiKey = `2cf94bc780975008cd2a907a522bc24a`;
+   const apiKey = `f45f076b53c6de3b335b39d3e294f46a`;
    const city = await findMyLocation();
 
    if (!city) {
