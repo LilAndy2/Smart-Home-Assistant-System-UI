@@ -9,7 +9,21 @@ function updateLiveTime() {
     container.style.backgroundImage = `url('images/${background}')`;
 
     // Set text color to white if it's night
-    container.style.color = isDay ? 'black' : 'white';
+    const cityNames = document.querySelectorAll('.time-zone h3');
+    cityNames.forEach(city => {
+        city.style.color = isDay ? 'black' : 'white';
+    });
+
+    // Set text color to black if it's day
+    const otherText = document.querySelectorAll('.live-time-container h2, #live-time-clock, #live-day, #live-date');
+    otherText.forEach(text => {
+        text.style.color = isDay ? 'black' : 'white';
+    });
+
+    const timeZoneHours = document.querySelectorAll('.time-zone div');
+    timeZoneHours.forEach(hour => {
+        hour.style.color = isDay ? 'black' : 'white';
+    });
 
     const minutes = currentTime.getMinutes();
     const seconds = currentTime.getSeconds();
@@ -31,12 +45,26 @@ function updateLiveDayAndDate() {
     document.getElementById('live-date').textContent = formattedDate;
 }
 
+// Function to update times for different time zones
+function updateTimeZoneTimes() {
+    const londonTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Europe/London' });
+    document.getElementById('london-time').textContent = londonTime;
+
+    const newYorkTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });
+    document.getElementById('new-york-time').textContent = newYorkTime;
+
+    const melbourneTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Australia/Melbourne' });
+    document.getElementById('melbourne-time').textContent = melbourneTime;
+}
+
 // Update live time, day, and date every second
 setInterval(() => {
     updateLiveTime();
     updateLiveDayAndDate();
+    updateTimeZoneTimes();
 }, 1000);
 
 // Initial update
 updateLiveTime();
 updateLiveDayAndDate();
+updateTimeZoneTimes();
