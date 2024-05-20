@@ -48,7 +48,7 @@ const findMyLocation = () => {
 
 
 async function getWeather() {
-   const apiKey = `f45f076b53c6de3b335b39d3e294f46a`;
+   const apiKey = `87cd96615534dc84f364d3bcba88285c`;
    const city = await findMyLocation();
 
    if (!city) {

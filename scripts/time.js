@@ -53,8 +53,8 @@ function updateTimeZoneTimes() {
     const newYorkTime = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });
     document.getElementById('new-york-time').textContent = newYorkTime;
 
-    const melbourneTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Australia/Melbourne' });
-    document.getElementById('melbourne-time').textContent = melbourneTime;
+    const sydneyTime = new Date().toLocaleTimeString('en-US', { timeZone: 'Australia/Sydney' });
+    document.getElementById('sydney-time').textContent = sydneyTime;
 }
 
 // Update live time, day, and date every second
