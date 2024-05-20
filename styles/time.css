@@ -31,13 +31,13 @@ body {
     padding: 20px;
     border-radius: 10px;
     width: 600px;
-    height: 410px;
+    height: 300px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: larger;
+    font-size: large;
 }
 
 .time-zones {

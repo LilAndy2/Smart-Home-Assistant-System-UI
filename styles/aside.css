@@ -9,18 +9,25 @@ a {
 
 h3 {
     color: #000000;
+    font-size: 1.5rem; /* Increase font size */
+}
+
+aside .top .logo-container h2 {
+    margin-top: 0.3rem;
+    font-size: 1.7rem; /* Increase font size */
 }
 
 .material-symbols-sharp {
     color: #000000;
+    font-size: 2.5rem; /* Increase font size */
 }
 
 aside {
     height: 100vh;
+    width: 20rem;
 }
 
 aside .top {
-    background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,12 +36,12 @@ aside .top {
 
 aside .logo-container {
     display: flex;
-    gap: 0.8rem;
+    gap: 1rem; /* Increase gap */
 }
 
 aside .logo-container img {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem; /* Increase image size */
+    height: 3rem; /* Increase image size */
 }
 
 aside .close {
@@ -51,7 +58,7 @@ aside .sidebar {
 
 aside h3 {
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 1.5rem; /* Increase font size */
 }
 
 aside .sidebar a {
@@ -61,12 +68,13 @@ aside .sidebar a {
     gap: 1rem;
     align-items: center;
     position: relative;
-    height: 3.7rem;
+    height: 5rem; /* Increase height */
     transition: all 300ms ease;
+    font-size: 1.7rem; /* Increase font size */
 }
 
 aside .sidebar a span {
-    font-size: 1.1rem;
+    font-size: 1.7rem; /* Increase font size */
     transition: all 300ms ease;
 }
 
@@ -78,7 +86,7 @@ aside .sidebar a.active {
 
 aside .sidebar a.active:before {
     content: "";
-    width: 6px;
+    width: 8px; /* Increase width */
     height: 100%;
     background: #ff7014;
 }
@@ -93,14 +101,14 @@ aside .sidebar a:hover {
 }
 
 aside .sidebar a:hover span {
-    margin-left: 1rem;
+    margin-left: 1.2rem; /* Increase margin left */
 }
 
 aside .sidebar .message-count {
     background : #ff7014;
     color: black;
-    padding: 2px 10px;
-    font-size: 13px;
-    border-radius: 10px;
+    padding: 3px 10px; /* Increase padding */
+    font-size: 14px; /* Increase font size */
+    border-radius: 12px; /* Increase border radius */
 }
 /************************************************* Sidebar *************************************************/

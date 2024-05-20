@@ -21,6 +21,7 @@ html {
 main {
     margin-top: 0.5rem;
     padding: 1.8rem;
+    margin-left: 7rem;
 }
 
 main .time-weather-container {
