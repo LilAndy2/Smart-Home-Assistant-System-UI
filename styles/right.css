@@ -1,0 +1,56 @@
+.profile-photo img {
+    width: 50px; 
+    height: 50px; 
+}
+
+.right {
+    margin-top: 1.4rem;
+}
+
+.right .top {
+    display: flex;
+    justify-content: end;
+    gap: 1.8rem;
+}
+
+.right .top button {
+    display: none;
+}
+
+.right .top .theme-toggler {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    width: 4.2rem;
+    cursor: pointer;
+    background: gray;
+    border-radius: 0.2rem;
+    justify-content: space-between;
+    margin-top: 0.8rem;
+}
+
+.right .top .theme-toggler span {
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .top .theme-toggler span.active {
+    background: #ff7014;
+    color: white;
+    border-radius: 0.2rem;
+}
+
+.right .top .profile {
+    display: flex;
+    gap: 1.8rem;
+    text-align: right;
+}
+
+.right .top .profile .info {
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+}

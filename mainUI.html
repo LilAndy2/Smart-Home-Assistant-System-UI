@@ -12,19 +12,10 @@
         <link rel="stylesheet" href="styles/intro.css">
         <link rel="stylesheet" href="styles/time.css">
         <link rel="stylesheet" href="styles/weather.css">
+        <link rel="stylesheet" href="styles/right.css">
 
-        <!-- Material Symbols for Sidebar -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <!-- CLOCK -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <!-- Material Symbols -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     </head>
 
     <body>
@@ -46,49 +37,51 @@
                     </div>
 
                     <div class="close" id="close-btn">
-                        <span class="material-symbols-sharp">close</span>
+                        <span class="material-icons-sharp">close</span>
                     </div>
                 </div>
 
                 <div class="sidebar">
                     <a href="#dashboard" class="active">
-                        <span class="material-symbols-sharp">grid_view</span>
+                        <span class="material-icons-sharp">grid_view</span>
                         <h3>Dashboard</h3>
                     </a>
 
                     <a href="#rooms">
-                        <span class="material-symbols-sharp">home</span>
+                        <span class="material-icons-sharp">home</span>
                         <h3>Rooms</h3>
                     </a>
 
                     <a href="#security">
-                        <span class="material-symbols-sharp">lock</span>
+                        <span class="material-icons-sharp">lock</span>
                         <h3>Security</h3>
                     </a>
 
                     <a href="#leisure">
-                        <span class="material-symbols-sharp">music_note</span>
+                        <span class="material-icons-sharp">music_note</span>
                         <h3>Leisure</h3>
                     </a>
 
                     <a href="#activities">
-                        <span class="material-symbols-sharp">checklist</span>
+                        <span class="material-icons-sharp">checklist</span>
                         <h3>Activities</h3>
                     </a>
 
                     <a href="#notifications">
-                        <span class="material-symbols-sharp">notifications</span>
+                        <span class="material-icons-sharp">notifications</span>
                         <h3>Notifications</h3>
                         <span class="message-count">0</span>
                     </a>
 
                     <a href="#settings">
-                        <span class="material-symbols-sharp">settings</span>
+                        <span class="material-icons-sharp">settings</span>
                         <h3>Settings</h3>
                     </a>
                 </div>
             </aside>
             <!---------------------- END OF ASIDE ---------------------->
+
+
 
             <!---------------------- START OF MAIN ---------------------->
             <main>
@@ -175,6 +168,34 @@
             
             <script src = "scripts/tabs.js"></script>
             <!---------------------- END OF MAIN ---------------------->
+
+
+
+            <!---------------------- START OF RIGHT ---------------------->
+            <div class = "right">
+                <div class = "top">
+                    <button id = "menu-btn">
+                        <span class="material-icons-sharp">menu</span>
+                    </button>
+
+                    <div class="theme-toggler">
+                        <span class="material-icons-sharp active">light_mode</span>
+                        <span class="material-icons-sharp">dark_mode</span>
+                    </div>
+
+                    <div class="profile">
+                        <div class="info">
+                            <p>Hey, <b>Andrei</b></p>
+                            <small class = "text-muted>">Admin</small>
+                        </div>
+                    </div>
+
+                    <div class="profile-photo">
+                        <img src="images/profile-photo.jpg">
+                    </div>
+                </div>
+            </div>
+            <!---------------------- START OF RIGHT ---------------------->
         </div>
 
     </body>
