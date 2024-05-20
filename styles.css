@@ -54,6 +54,12 @@ html {
     opacity: 0;
     transition: ease-in-out 0.5s;
 }
+
+h10 {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
 /************************************************* Intro Screen *************************************************/
 
 
@@ -167,7 +173,7 @@ aside .sidebar .message-count {
 
 /************************************************* Main Screen *************************************************/
 main {
-    margin-top: 1.4rem;
+    margin-top: 0.5rem;
     padding: 1.8rem;
 }
 
@@ -178,7 +184,6 @@ main .time-weather-container {
 }
 
 main .time-weather-container > div {
-    background: white;
     padding: 1.6rem;
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -193,25 +198,9 @@ main .time-weather-container > div {
     background: lightgray;
 }
 
-/* #weather-icon {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 10px;
-    margin-bottom: 0;
-    display: none;
+h1 {
+    font-size: 3rem;
 }
-
-#weather-info {
-    font-size: 20px;
-}
-
-#hourly-forecast {
-    margin-top: 50px;
-    overflow-x: auto;
-    display: flex;
-    white-space: nowrap;
-    justify-content: space-between;
-} */
 
 /* TIME WIDGET */
 .live-time-container h2 {
@@ -245,14 +234,14 @@ body {
     background-position: center;
     padding: 20px;
     border-radius: 10px;
-    width: 350px;
-    height: 300px;
+    width: 600px;
+    height: 410px;
     position: relative;
-    left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: larger;
 }
 
 .time-zones {
@@ -279,11 +268,16 @@ body {
 /* WEATHER WIDGET */
 .weather-container {
     padding: 20px;
-    background-color: #f0f0f0;
+    background: white;
     border-radius: 10px;
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
+    margin-top: 20px;
+}
+
+.weather-container h2 {
+    font-size: 2em;
 }
 
 .weather-forecast {
@@ -310,13 +304,13 @@ body {
     justify-content: space-between; /* Spread items evenly along the row */
     align-items: center; /* Center items vertically */
     overflow-x: auto; /* Enable horizontal scrolling if forecast items exceed container width */
-    padding: 10px 0; /* Add padding for better spacing */
+    padding: 0 0; /* Add padding for better spacing */
 }
 
 .forecast-item {
     flex: 0 0 auto; /* Let items grow and shrink as needed */
     text-align: center; /* Center content horizontally */
-    padding: 0 10px; /* Add padding around each forecast item */
+    padding: 0 0; /* Add padding around each forecast item */
 }
 
 /************************************************* Main Screen *************************************************/
@@ -324,4 +318,3 @@ body {
 .hidden {
     display: none;
 }
-
