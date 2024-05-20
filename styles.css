@@ -278,8 +278,47 @@ body {
 
 /* WEATHER WIDGET */
 .weather-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.weather-forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     margin-top: 20px;
 }
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.weather-forecast {
+    display: flex; /* Display all forecast items in a row */
+    justify-content: space-between; /* Spread items evenly along the row */
+    align-items: center; /* Center items vertically */
+    overflow-x: auto; /* Enable horizontal scrolling if forecast items exceed container width */
+    padding: 10px 0; /* Add padding for better spacing */
+}
+
+.forecast-item {
+    flex: 0 0 auto; /* Let items grow and shrink as needed */
+    text-align: center; /* Center content horizontally */
+    padding: 0 10px; /* Add padding around each forecast item */
+}
+
 /************************************************* Main Screen *************************************************/
 
 .hidden {
