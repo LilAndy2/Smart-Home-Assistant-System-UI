@@ -1,0 +1,62 @@
+/* TIME WIDGET */
+.live-time-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#live-time-clock {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+#live-day {
+    font-size: 1.5em;
+}
+
+#live-date {
+    margin-bottom: 10px;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.live-time-container {
+    text-align: center;
+    margin-top: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    height: 410px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+
+.time-zones {
+    display: flex;
+}
+
+.time-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px; 
+}
+
+.time-zone h3 {
+    font-size: 1.2em;
+}
+
+.time-zone img {
+    width: 50px;
+    height: 50px;
+}
+/* TIME WIDGET */

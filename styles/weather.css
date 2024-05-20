@@ -1,0 +1,47 @@
+/* WEATHER WIDGET */
+.weather-container {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.weather-container h2 {
+    font-size: 2em;
+}
+
+.weather-forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.weather-forecast {
+    display: flex; /* Display all forecast items in a row */
+    justify-content: space-between; /* Spread items evenly along the row */
+    align-items: center; /* Center items vertically */
+    overflow-x: auto; /* Enable horizontal scrolling if forecast items exceed container width */
+    padding: 0 0; /* Add padding for better spacing */
+}
+
+.forecast-item {
+    flex: 0 0 auto; /* Let items grow and shrink as needed */
+    text-align: center; /* Center content horizontally */
+    padding: 0 0; /* Add padding around each forecast item */
+}
