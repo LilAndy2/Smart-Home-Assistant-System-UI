@@ -103,3 +103,14 @@ header .current-date{
 .days li:not(.active):hover::before{
   background: #f2f2f2;
 }
+
+.days li.has-task::after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: black;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 5px;
+}

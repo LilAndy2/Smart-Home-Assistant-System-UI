@@ -74,3 +74,8 @@ task-form {
     background-color: yellow;
     transition: background-color 2s ease-out;
 }
+
+.task.highlight {
+    background-color: lightgray;
+    transition: background-color 0.5s ease;
+}
