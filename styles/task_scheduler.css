@@ -2,8 +2,6 @@ task-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 .task-form h1 {
@@ -22,7 +20,7 @@ task-form {
 
 .task-form input, .task-form select, .task-form button {
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
     font-size: 16px;
 }
 
@@ -56,11 +54,12 @@ task-form {
 }
 
 .task-scheduler {
-    margin-top: 20px;
     padding: 20px;
     background: white;
     border-radius: 10px;
     width: 100%;
+    height: 350px;
+    overflow-y: auto;
 }
 
 .task-done {
@@ -69,4 +68,9 @@ task-form {
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+
+.task.new-task {
+    background-color: yellow;
+    transition: background-color 2s ease-out;
 }

@@ -14,9 +14,11 @@
         <link rel="stylesheet" href="styles/weather.css">
         <link rel="stylesheet" href="styles/right.css">
         <link rel="stylesheet" href="styles/task_scheduler.css">
+        <link rel="stylesheet" href="styles/calendar.css">
 
         <!-- Material Symbols -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    
     </head>
 
     <body>
@@ -154,7 +156,7 @@
 
 
                 <!---------------------- LEISURE ---------------------->
-                <section id="leisure" class="content-section hidden">
+                <section id = "leisure" class = "content-section hidden">
                     <h1>Leisure</h1>
                     <!-- Leisure content -->
                 </section>
@@ -162,11 +164,11 @@
 
 
                 <!---------------------- ACTIVITIES ---------------------->
-                <section id="activities" class="content-section hidden">
+                <section id = "activities" class = "content-section hidden">
                     <h1>Activities</h1>
-
+                    
                     <!-- TASK SCHEDULER -->
-                    <div class = "task-scheduler">
+                    <div class="task-scheduler">
                         <div class = "task-form">
                             <h1>Task Scheduler</h1>
                             <input type = "text" id = "task" placeholder = "Enter task...">
@@ -182,8 +184,33 @@
                             <!-- Tasks will be added here dynamically -->
                         </div>
                     </div>
-                    <script src = "scripts/task_scheduler.js"></script>
+                    <script src="scripts/task_scheduler.js"></script>
                     <!-- TASK SCHEDULER -->
+
+                    <!-- CALENDAR VIEW -->
+                    <div class = "wrapper">
+                        <header>
+                          <p class = "current-date"></p>
+                          <div class = "icons">
+                            <span id = "prev" class = "material-icons-sharp">chevron_left</span>
+                            <span id = "next" class = "material-icons-sharp">chevron_right</span>
+                          </div>
+                        </header>
+                        <div class = "calendar">
+                          <ul class = "weeks">
+                            <li>Sun</li>
+                            <li>Mon</li>
+                            <li>Tue</li>
+                            <li>Wed</li>
+                            <li>Thu</li>
+                            <li>Fri</li>
+                            <li>Sat</li>
+                          </ul>
+                          <ul class = "days"></ul>
+                        </div>
+                    </div>
+                    <script src="scripts/calendar.js" defer></script>
+                    <!-- CALENDAR VIEW -->
 
                 </section>
                 <!---------------------- ACTIVITIES ---------------------->
