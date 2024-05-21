@@ -5,36 +5,32 @@ task-form {
     margin-bottom: 20px;
     margin-top: 20px;
 }
+
 .task-form h1 {
     width: 100%;
     text-align: center;
-    background: #ff7014
+    background: #ff7014;
 }
+
 .task-form div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap;
     width: 100%;
 }
+
 .task-form input, .task-form select, .task-form button {
     padding: 10px;
     margin: 5px;
     font-size: 16px;
 }
+
 .task-list {
+    width: 100%;
     margin-top: 20px;
     border: 1px solid #ddd;
     padding: 10px;
-    width: 100%;
-}
-
-.task-scheduler {
-    margin-top: 20px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    width: 100%;
 }
 
 .task {
@@ -45,6 +41,12 @@ task-form {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.task p {
+    margin: 0;
+    padding: 5px;
 }
 
 .task button {
@@ -53,4 +55,20 @@ task-form {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+}
+
+.task-scheduler {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.task-done {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
