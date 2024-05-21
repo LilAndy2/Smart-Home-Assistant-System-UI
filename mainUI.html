@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="styles/time.css">
         <link rel="stylesheet" href="styles/weather.css">
         <link rel="stylesheet" href="styles/right.css">
+        <link rel="stylesheet" href="styles/task_scheduler.css">
 
         <!-- Material Symbols -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
@@ -131,6 +132,23 @@
                         <!-- WEATHER -->
                     </div>
 
+                    <div class = "task-scheduler">
+                        <div class = "task-form">
+                            <h1>Task Scheduler</h1>
+                            <input type = "text" id = "task" placeholder = "Enter task...">
+                            <select id = "priority">
+                                <option value = "top">Top Priority</option>
+                                <option value = "middle">Middle Priority</option>
+                                <option value = "low">Less Priority</option>
+                            </select>
+                            <input type = "date" id = "deadline">
+                            <button id = "add-task">Add Task</button>
+                        </div>
+                        <div class = "task-list" id = "task-list">
+                            <!-- Tasks will be added here dynamically -->
+                        </div>
+                    </div>
+                    <script src = "scripts/task_scheduler.js"></script>
 
                 </section>
                 <!---------------------- DASHBOARD ---------------------->
@@ -195,7 +213,7 @@
                     </div>
                 </div>
             </div>
-            <!---------------------- START OF RIGHT ---------------------->
+            <!---------------------- END OF RIGHT ---------------------->
         </div>
 
     </body>
