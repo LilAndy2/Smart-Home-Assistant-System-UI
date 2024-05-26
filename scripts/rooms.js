@@ -19,5 +19,47 @@ function showRooms(floor) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    var temperatureSliderLivingRoom = document.getElementById("living-room-temperature-slider");
+    var temperatureDisplayLivingRoom = document.getElementById("living-room-temp");
+
+    temperatureSliderLivingRoom.addEventListener("input", function() {
+        var temperatureValue = temperatureSliderLivingRoom.value;
+        temperatureDisplayLivingRoom.textContent = temperatureValue + "°C";
+    });
+
+    var temperatureSliderBedroom = document.getElementById("bedroom-temperature-slider");
+    var temperatureDisplayBedroom = document.getElementById("bedroom-temp");
+
+    temperatureSliderBedroom.addEventListener("input", function() {
+        var temperatureValue = temperatureSliderBedroom.value;
+        temperatureDisplayBedroom.textContent = temperatureValue + "°C";
+    });
+
+    var temperatureSliderKitchen = document.getElementById("kitchen-temperature-slider");
+    var temperatureDisplayKitchen = document.getElementById("kitchen-temp");
+
+    temperatureSliderKitchen.addEventListener("input", function() {
+        var temperatureValue = temperatureSliderKitchen.value;
+        temperatureDisplayKitchen.textContent = temperatureValue + "°C";
+    });
+
+    var temperatureSliderBathroom = document.getElementById("bathroom-temperature-slider");
+    var temperatureDisplayBathroom = document.getElementById("bathroom-temp");
+
+    temperatureSliderBathroom.addEventListener("input", function() {
+        var temperatureValue = temperatureSliderBathroom.value;
+        temperatureDisplayBathroom.textContent = temperatureValue + "°C";
+    });
+
+    var temperatureSliderOffice = document.getElementById("office-temperature-slider");
+    var temperatureDisplayOffice = document.getElementById("office-temp");
+
+    temperatureSliderOffice.addEventListener("input", function() {
+        var temperatureValue = temperatureSliderOffice.value;
+        temperatureDisplayOffice.textContent = temperatureValue + "°C";
+    });
+});
+
 // Initialize with downstairs rooms shown
 showRooms('downstairs');

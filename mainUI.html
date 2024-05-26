@@ -143,15 +143,23 @@
                 <!---------------------- ROOMS ---------------------->
                 <section id="rooms" class="content-section hidden">
                     <h1>Rooms</h1>
+
+                    <!---------------------- FLOORS ---------------------->
                     <div class="floor-selector">
                         <button id="downstairs-btn" onclick="showRooms('downstairs')">Downstairs</button>
                         <button id="upstairs-btn" onclick="showRooms('upstairs')">Upstairs</button>
                     </div>
+                    <!---------------------- FLOORS ---------------------->
+
                     <div class="rooms-container" id="rooms-container">
+                        <!---------------------- DOWNSTAIRS ---------------------->
                         <div class="room-widget" data-floor="downstairs">
                             <h2>Living Room</h2>
                             <div class="room-info">
                                 <p>Temperature: <span id="living-room-temp">22°C</span></p>
+                                <!-- Temperature slider -->
+                                <input type="range" id="living-room-temperature-slider" class="temperature-slider" name="living-room-temperature-slider" min="16" max="30" value="22">
+                                <!-- Temperature slider -->
                                 <p>Lights: <span id="living-room-lights">On</span></p>
                                 <button class="control-btn" onclick="toggleLights('living-room')">Toggle Lights</button>
                             </div>
@@ -161,15 +169,36 @@
                             <h2>Kitchen</h2>
                             <div class="room-info">
                                 <p>Temperature: <span id="kitchen-temp">20°C</span></p>
+                                <!-- Temperature slider -->
+                                <input type="range" id="kitchen-temperature-slider" class="temperature-slider" name="living-room-temperature-slider" min="16" max="30" value="20">
+                                <!-- Temperature slider -->
                                 <p>Lights: <span id="kitchen-lights">Off</span></p>
                                 <button class="control-btn" onclick="toggleLights('kitchen')">Toggle Lights</button>
                             </div>
                         </div>
 
+                        <div class="room-widget" data-floor="downstairs">
+                            <h2>Office</h2>
+                            <div class="room-info">
+                                <p>Temperature: <span id="office-temp">21°C</span></p>
+                                <!-- Temperature slider -->
+                                <input type="range" id="office-temperature-slider" class="temperature-slider" name="living-room-temperature-slider" min="16" max="30" value="21">
+                                <!-- Temperature slider -->
+                                <p>Lights: <span id="office-lights">On</span></p>
+                                <button class="control-btn" onclick="toggleLights('office')">Toggle Lights</button>
+                            </div>
+                        </div>
+
+                        <!---------------------- DOWNSTAIRS ---------------------->
+
+                        <!---------------------- UPSTAIRS ---------------------->
                         <div class="room-widget" data-floor="upstairs">
                             <h2>Bedroom</h2>
                             <div class="room-info">
                                 <p>Temperature: <span id="bedroom-temp">19°C</span></p>
+                                <!-- Temperature slider -->
+                                <input type="range" id="bedroom-temperature-slider" class="temperature-slider" name="living-room-temperature-slider" min="16" max="30" value="19">
+                                <!-- Temperature slider -->
                                 <p>Lights: <span id="bedroom-lights">Off</span></p>
                                 <button class="control-btn" onclick="toggleLights('bedroom')">Toggle Lights</button>
                             </div>
@@ -179,19 +208,15 @@
                             <h2>Bathroom</h2>
                             <div class="room-info">
                                 <p>Temperature: <span id="bathroom-temp">23°C</span></p>
+                                <!-- Temperature slider -->
+                                <input type="range" id="bathroom-temperature-slider" class="temperature-slider" name="living-room-temperature-slider" min="16" max="30" value="23">
+                                <!-- Temperature slider -->
                                 <p>Lights: <span id="bathroom-lights">On</span></p>
                                 <button class="control-btn" onclick="toggleLights('bathroom')">Toggle Lights</button>
                             </div>
                         </div>
-
-                        <div class="room-widget" data-floor="downstairs">
-                            <h2>Office</h2>
-                            <div class="room-info">
-                                <p>Temperature: <span id="office-temp">21°C</span></p>
-                                <p>Lights: <span id="office-lights">On</span></p>
-                                <button class="control-btn" onclick="toggleLights('office')">Toggle Lights</button>
-                            </div>
-                        </div>
+                        <!---------------------- UPSTAIRS ---------------------->
+                        
                     </div>
                     <script src="scripts/rooms.js"></script>
                 </section>
