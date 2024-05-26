@@ -209,6 +209,8 @@
                                     <p><span class="material-icons-sharp">lightbulb</span>Lights: <span id="bedroom1-lights">Off</span></p>
                                     <button class="control-btn" onclick="toggleLights('bedroom1')">Toggle Lights</button>
                                 </div>
+
+                                <hr class="divider">
                             </div>
                         </div>
 
@@ -223,13 +225,15 @@
                                     <p><span class="material-icons-sharp">lightbulb</span>Lights: <span id="bedroom2-lights">Off</span></p>
                                     <button class="control-btn" onclick="toggleLights('bedroom2')">Toggle Lights</button>
                                 </div>
+
+                                <hr class="divider">
                             </div>
                         </div>
 
                         <div class="room-widget" data-floor="upstairs">
                             <h2>Bathroom</h2>
                             <div class="room-info">
-                                <p>Temperature: <span id="bathroom-temp">23°C</span></p>
+                                <p><span class="material-icons-sharp">thermostat</span>Temperature: <span id="bathroom-temp">23°C</span></p>
                                 <!-- Temperature slider -->
                                 <input type="range" id="bathroom-temperature-slider" class="temperature-slider" name="bathroom-temperature-slider" min="16" max="30" value="23">
                                 <!-- Temperature slider -->
@@ -238,9 +242,7 @@
                                     <button class="control-btn" onclick="toggleLights('bathroom')">Toggle Lights</button>
                                 </div>
 
-                                <div class="line">
-                                    <p>---------------------------------</p>
-                                </div>
+                                <hr class="divider">
 
                                 <!-- Washing machine usage section -->
                                 <div class="washing-machine-usage">
@@ -275,13 +277,39 @@
                                 </div>
                                 <!-- Washing machine usage section -->
 
-                                <div class="line">
-                                    <p>---------------------------------</p>
+                                <hr class="divider">
+
+                                <!-- Water usage section -->
+                                <div class="water-usage">
+                                    <h3>Water Usage</h3>
+                                    <div class="usage-widget">
+                                        <div class="usage-icon">
+                                            <span class="material-icons-sharp large">invert_colors_off</span>
+                                            <p>Sensor Dry</p>
+                                        </div>
+                                        <div class="usage-circle" id="water-usage-circle">
+                                            <div class="usage-value">
+                                                <span id="water-usage-value">60</span> liters
+                                            </div>
+                                            <div class="usage-label">Daily Avg 180L</div>
+                                        </div>
+                                        <div class="usage-icon">
+                                            <span class="material-icons-sharp large">tune</span>
+                                            <p>Valve Open</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Water usage section -->
+
+                                <hr class="divider">
+
+                                <!-- Mirror light section -->
+                                <div class="mirror-light">
+                                    <p><span class="material-icons-sharp">lightbulb</span>Mirror Light: <span id="mirror-light-status">Off</span></p>
+                                    <button class="control-btn-mirror" id="toggle-mirror-light">Toggle Light</button>
                                 </div>
                             </div>
                         </div>
-                        
-                        
                         <!---------------------- UPSTAIRS ---------------------->
                         
                     </div>

@@ -8,6 +8,16 @@ function toggleLights(room) {
     }
 }
 
+let mirrorLightStatus = false;
+
+function toggleMirrorLight() {
+    mirrorLightStatus = !mirrorLightStatus;
+    const statusText = mirrorLightStatus ? 'On' : 'Off';
+    document.getElementById('mirror-light-status').innerText = statusText;
+}
+
+document.getElementById('toggle-mirror-light').addEventListener('click', toggleMirrorLight);
+
 function showRooms(floor) {
     const allRooms = document.querySelectorAll('.room-widget');
     allRooms.forEach(room => {
@@ -114,3 +124,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Initialize with downstairs rooms shown
 showRooms('downstairs');
+
+function updateWaterUsage(usagePercentage) {
+    const circle = document.getElementById('water-usage-circle');
+    const progress = Math.min(usagePercentage, 100);
+    circle.style.setProperty('--progress', `${progress}%`);
+    document.getElementById('water-usage-value').innerText = usagePercentage;
+}
+
+updateWaterUsage(60);
