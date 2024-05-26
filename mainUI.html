@@ -156,36 +156,42 @@
                         <div class="room-widget" data-floor="downstairs">
                             <h2>Living Room</h2>
                             <div class="room-info">
-                                <p>Temperature: <span id="living-room-temp">22°C</span></p>
+                                <p><span class="material-icons-sharp">thermostat</span>Temperature: <span id="living-room-temp">22°C</span></p>
                                 <!-- Temperature slider -->
                                 <input type="range" id="living-room-temperature-slider" class="temperature-slider" name="living-room-temperature-slider" min="16" max="30" value="22">
                                 <!-- Temperature slider -->
-                                <p>Lights: <span id="living-room-lights">On</span></p>
-                                <button class="control-btn" onclick="toggleLights('living-room')">Toggle Lights</button>
+                                <div class="light-control">
+                                    <p><span class="material-icons-sharp">lightbulb</span>Lights: <span id="living-room-lights">On</span></p>
+                                    <button class="control-btn" onclick="toggleLights('living-room')">Toggle Lights</button>
+                                </div>
                             </div>
                         </div>
 
                         <div class="room-widget" data-floor="downstairs">
                             <h2>Kitchen</h2>
                             <div class="room-info">
-                                <p>Temperature: <span id="kitchen-temp">20°C</span></p>
+                                <p><span class="material-icons-sharp">thermostat</span>Temperature: <span id="kitchen-temp">20°C</span></p>
                                 <!-- Temperature slider -->
-                                <input type="range" id="kitchen-temperature-slider" class="temperature-slider" name="living-room-temperature-slider" min="16" max="30" value="20">
+                                <input type="range" id="kitchen-temperature-slider" class="temperature-slider" name="kitchen-temperature-slider" min="16" max="30" value="20">
                                 <!-- Temperature slider -->
-                                <p>Lights: <span id="kitchen-lights">Off</span></p>
-                                <button class="control-btn" onclick="toggleLights('kitchen')">Toggle Lights</button>
+                                <div class="light-control">
+                                    <p><span class="material-icons-sharp">lightbulb</span>Lights: <span id="kitchen-lights">Off</span></p>
+                                    <button class="control-btn" onclick="toggleLights('kitchen')">Toggle Lights</button>
+                                </div>
                             </div>
                         </div>
 
                         <div class="room-widget" data-floor="downstairs">
                             <h2>Office</h2>
                             <div class="room-info">
-                                <p>Temperature: <span id="office-temp">21°C</span></p>
+                                <p><span class="material-icons-sharp">thermostat</span>Temperature: <span id="office-temp">21°C</span></p>
                                 <!-- Temperature slider -->
-                                <input type="range" id="office-temperature-slider" class="temperature-slider" name="living-room-temperature-slider" min="16" max="30" value="21">
+                                <input type="range" id="office-temperature-slider" class="temperature-slider" name="office-temperature-slider" min="16" max="30" value="21">
                                 <!-- Temperature slider -->
-                                <p>Lights: <span id="office-lights">On</span></p>
-                                <button class="control-btn" onclick="toggleLights('office')">Toggle Lights</button>
+                                <div class="light-control">
+                                    <p><span class="material-icons-sharp">lightbulb</span>Lights: <span id="office-lights">On</span></p>
+                                    <button class="control-btn" onclick="toggleLights('office')">Toggle Lights</button>
+                                </div>
                             </div>
                         </div>
 
@@ -193,14 +199,30 @@
 
                         <!---------------------- UPSTAIRS ---------------------->
                         <div class="room-widget" data-floor="upstairs">
-                            <h2>Bedroom</h2>
+                            <h2>Bedroom 1</h2>
                             <div class="room-info">
-                                <p>Temperature: <span id="bedroom-temp">19°C</span></p>
+                                <p><span class="material-icons-sharp">thermostat</span>Temperature: <span id="bedroom1-temp">19°C</span></p>
                                 <!-- Temperature slider -->
-                                <input type="range" id="bedroom-temperature-slider" class="temperature-slider" name="living-room-temperature-slider" min="16" max="30" value="19">
+                                <input type="range" id="bedroom1-temperature-slider" class="temperature-slider" name="bedroom1-temperature-slider" min="16" max="30" value="19">
                                 <!-- Temperature slider -->
-                                <p>Lights: <span id="bedroom-lights">Off</span></p>
-                                <button class="control-btn" onclick="toggleLights('bedroom')">Toggle Lights</button>
+                                <div class="light-control">
+                                    <p><span class="material-icons-sharp">lightbulb</span>Lights: <span id="bedroom1-lights">Off</span></p>
+                                    <button class="control-btn" onclick="toggleLights('bedroom1')">Toggle Lights</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="room-widget" data-floor="upstairs">
+                            <h2>Bedroom 2</h2>
+                            <div class="room-info">
+                                <p><span class="material-icons-sharp">thermostat</span>Temperature: <span id="bedroom2-temp">19°C</span></p>
+                                <!-- Temperature slider -->
+                                <input type="range" id="bedroom2-temperature-slider" class="temperature-slider" name="bedroom2-temperature-slider" min="16" max="30" value="19">
+                                <!-- Temperature slider -->
+                                <div class="light-control">
+                                    <p><span class="material-icons-sharp">lightbulb</span>Lights: <span id="bedroom2-lights">Off</span></p>
+                                    <button class="control-btn" onclick="toggleLights('bedroom2')">Toggle Lights</button>
+                                </div>
                             </div>
                         </div>
 
@@ -209,12 +231,57 @@
                             <div class="room-info">
                                 <p>Temperature: <span id="bathroom-temp">23°C</span></p>
                                 <!-- Temperature slider -->
-                                <input type="range" id="bathroom-temperature-slider" class="temperature-slider" name="living-room-temperature-slider" min="16" max="30" value="23">
+                                <input type="range" id="bathroom-temperature-slider" class="temperature-slider" name="bathroom-temperature-slider" min="16" max="30" value="23">
                                 <!-- Temperature slider -->
-                                <p>Lights: <span id="bathroom-lights">On</span></p>
-                                <button class="control-btn" onclick="toggleLights('bathroom')">Toggle Lights</button>
+                                <div class="light-control">
+                                    <p><span class="material-icons-sharp">lightbulb</span>Lights: <span id="bathroom-lights">On</span></p>
+                                    <button class="control-btn" onclick="toggleLights('bathroom')">Toggle Lights</button>
+                                </div>
+
+                                <div class="line">
+                                    <p>---------------------------------</p>
+                                </div>
+
+                                <!-- Washing machine usage section -->
+                                <div class="washing-machine-usage">
+                                    <h3><span class="material-icons-sharp">local_laundry_service</span>Washing Machine Usage</h3>
+                                    <div class="washing-controls">
+                                        <div class="controls-right">
+                                            <div class="controls-line">
+                                                <label for="washing-duration">Duration:</label>
+                                                <select id="washing-duration" name="washing-duration">
+                                                    <option value="120">120</option>
+                                                    <option value="90">90</option>
+                                                    <option value="60">60</option>
+                                                </select>
+                                            </div>
+                                            <div class="controls-line">
+                                                <label for="washing-cycle">Cycle:</label>
+                                                <select id="washing-cycle" name="washing-cycle">
+                                                    <option value="normal">Normal</option>
+                                                    <option value="quick">Quick</option>
+                                                    <option value="delicate">Delicate</option>
+                                                </select>
+                                            </div>
+                                            <div class="controls-line">
+                                                <button id="start-btn">Start</button>
+                                                <button id="stop-btn">Stop</button>
+                                            </div>
+                                            <div class="controls-line ongoing-label hidden">
+                                                <p>Ongoing: <span id="countdown">0:00</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Washing machine usage section -->
+
+                                <div class="line">
+                                    <p>---------------------------------</p>
+                                </div>
                             </div>
                         </div>
+                        
+                        
                         <!---------------------- UPSTAIRS ---------------------->
                         
                     </div>
