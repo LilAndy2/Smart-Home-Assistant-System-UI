@@ -230,6 +230,21 @@
                                 </div>
                                 <!-- Curtains Control -->
 
+                                <!-- Fan Control -->
+                                <div class="fan-control">
+                                    <span class="material-icons-sharp">ac_unit</span>
+                                    <p>Fan: </p>
+                                    <button class="fan-btn" id="fan-on" title="Turn Fan On">
+                                        <span class="material-icons-sharp">power</span>
+                                    </button>
+                                    <button class="fan-btn" id="fan-off" title="Turn Fan Off">
+                                        <span class="material-icons-sharp">power_off</span>
+                                    </button>
+                                </div>
+                                <input type="range" id="fan-speed" class="fan-speed-slider" name="fan-speed-slider" min="1" max="3" value="2">
+                                <p id="fan-status">Fan is OFF</p>
+                                <!-- Fan Control -->
+
                                 <hr class="divider">
 
                                 <!-- Alarms Control -->
@@ -258,6 +273,13 @@
                                 <!-- Alarms Control -->
 
                                 <hr class="divider">
+
+                                <!-- TV Control -->
+                                <div class="tv-control-1">
+                                    <p><span class="material-icons-sharp">tv</span>TV: <span id="tv-status">Off</span></p>
+                                    <button class="control-btn" onclick="toggleTV()">Turn TV On</button>
+                                </div>
+                                <!-- TV Control -->
                             </div>
                         </div>
 
@@ -291,6 +313,29 @@
                                 </div>
                                 <!-- Curtains Control -->
 
+                                <!-- Desk Lamp Control -->
+                                <div class="desk-lamp-control">
+                                    <span class="material-icons-sharp">light</span>
+                                    <p>Desk Lamp: </p>
+                                    <button class="lamp-btn-red" id="lamp-red" title="Red">
+                                        <span class="material-icons-sharp">lens</span>
+                                    </button>
+                                    <button class="lamp-btn-blue" id="lamp-blue" title="Blue">
+                                        <span class="material-icons-sharp">lens</span>
+                                    </button>
+                                    <button class="lamp-btn-green" id="lamp-green" title="Green">
+                                        <span class="material-icons-sharp">lens</span>
+                                    </button>
+                                </div>
+                                <!-- Desk Lamp Control -->
+
+                                <!-- Bed Light Control -->
+                                <div class="bed-light-control">
+                                    <p><span class="material-icons-sharp">bedtime</span>Bed Light: <span id="bed-light-status">Off</span></p>
+                                    <button class="control-btn-bed" onclick="toggleBedLight()">Turn Bed Light On</button>
+                                </div>
+                                <!-- Bed Light Control -->
+
                                 <hr class="divider">
 
                                 <!-- Alarms Control -->
@@ -319,6 +364,13 @@
                                 <!-- Alarms Control -->
 
                                 <hr class="divider">
+
+                                <!-- TV Control -->
+                                <div class="tv-control-2">
+                                    <p><span class="material-icons-sharp">tv</span>TV: <span id="tv-status-2">Off</span></p>
+                                    <button class="control-btn-2" onclick="toggleTV2()">Turn TV On</button>
+                                </div>
+                                <!-- TV Control -->
                             </div>
                         </div>
 
