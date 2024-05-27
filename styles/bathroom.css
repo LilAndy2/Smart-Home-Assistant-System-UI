@@ -1,0 +1,129 @@
+.washing-machine-usage {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.washing-machine-usage .material-icons-sharp {
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+.washing-controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.controls-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.controls-line {
+    display: flex;
+    align-items: center;
+}
+
+.controls-line button {
+    background-color: #ff7014;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.controls-line label,
+.controls-line input,
+.controls-line select,
+.controls-line button {
+    margin-right: 10px;
+}
+
+.divider {
+    border: 0;
+    height: 2px;
+    background: black;
+    margin: 20px 0;
+}
+.large {
+    font-size: 36px;
+}
+
+.water-usage {
+    text-align: center;
+}
+
+.usage-widget {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usage-icon {
+    text-align: center;
+}
+
+.usage-icon span {
+    font-size: 48px;
+}
+
+.usage-icon p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.usage-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: conic-gradient(rgb(38, 109, 239) 0% var(--progress), #e0e0e0 var(--progress) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.usage-value {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.usage-label {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.usage-circle[data-progress] {
+    background: conic-gradient(rgb(38, 109, 239) 0% var(--progress), #e0e0e0 var(--progress) 100%);
+}
+
+.usage-circle[data-progress="100"] {
+    background: rgb(38, 109, 239);
+}
+
+.water-usage h3 {
+    margin-bottom: 10px;
+}
+
+.mirror-light {
+    display: flex;
+    margin-top: 10px;
+}
+
+.washing-controls .controls-right .controls-line select:focus {
+    border-color: #ff7014;
+    box-shadow: 0 0 5px #fe6607;
+}
+
+.washing-controls .controls-right .controls-line select {
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}

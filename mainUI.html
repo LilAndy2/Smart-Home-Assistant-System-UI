@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="styles/task_scheduler.css">
         <link rel="stylesheet" href="styles/calendar.css">
         <link rel="stylesheet" href="styles/rooms.css">
+        <link rel="stylesheet" href="styles/bedrooms.css">
+        <link rel="stylesheet" href="styles/bathroom.css">
 
         <!-- Material Symbols -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
@@ -211,6 +213,51 @@
                                 </div>
 
                                 <hr class="divider">
+
+                                <!-- Curtains Control -->
+                                <div class="curtains-control">
+                                    <span class="material-icons-sharp">blinds</span>
+                                    <p>Curtains: </p>
+                                    <button class="curtains-btn" id="curtains-open-1" title="Open Curtains">
+                                        <span class="material-icons-sharp">vertical_shades</span>
+                                    </button>
+                                    <button class="curtains-btn" id="curtains-close-1" title="Close Curtains">
+                                        <span class="material-icons-sharp">curtains_closed</span>
+                                    </button>
+                                    <button class="curtains-btn" id="curtains-stop" title="Stop Curtains">
+                                        <span class="material-icons-sharp">stop</span>
+                                    </button>
+                                </div>
+                                <!-- Curtains Control -->
+
+                                <hr class="divider">
+
+                                <!-- Alarms Control -->
+                                <div class="alarm-control">
+                                    <p><b>Alarm</b></p>
+                                    <div class = "alarm-content">
+                                        <span class="material-icons-sharp">alarm</span>
+                                        <select id="alarm-hour" class="alarm-time-select">
+                                            <option value = "Hour" selected hidden>Hour</option>
+                                        </select>
+                                        <select id="alarm-minute" class="alarm-time-select">
+                                            <option value = "Minute" selected hidden>Minute</option>
+                                        </select>
+                                        <select id="alarm-period" class="alarm-time-select">
+                                            <option value = "AM/PM" selected hidden>AM/PM</option>
+                                        </select>
+                                    </div>
+                                    <select id="alarm-tone" class="alarm-tone-select">
+                                        <option value = "Tone" selected hidden>Tone</option>
+                                        <option value = "Tone 1">Tone 1</option>
+                                        <option value = "Tone 2">Tone 2</option>
+                                        <option value = "Tone 3">Tone 3</option>
+                                    </select>
+                                    <button id="set-alarm" class="alarm-btn">Set Alarm</button>
+                                </div>
+                                <!-- Alarms Control -->
+
+                                <hr class="divider">
                             </div>
                         </div>
 
@@ -225,6 +272,51 @@
                                     <p><span class="material-icons-sharp">lightbulb</span>Lights: <span id="bedroom2-lights">Off</span></p>
                                     <button class="control-btn" onclick="toggleLights('bedroom2')">Toggle Lights</button>
                                 </div>
+
+                                <hr class="divider">
+
+                                <!-- Curtains Control -->
+                                <div class="curtains-control">
+                                    <span class="material-icons-sharp">blinds</span>
+                                    <p>Curtains: </p>
+                                    <button class="curtains-btn" id="curtains-open-2" title="Open Curtains">
+                                        <span class="material-icons-sharp">vertical_shades</span>
+                                    </button>
+                                    <button class="curtains-btn" id="curtains-close-2" title="Close Curtains">
+                                        <span class="material-icons-sharp">curtains_closed</span>
+                                    </button>
+                                    <button class="curtains-btn" id="curtains-stop" title="Stop Curtains">
+                                        <span class="material-icons-sharp">stop</span>
+                                    </button>
+                                </div>
+                                <!-- Curtains Control -->
+
+                                <hr class="divider">
+
+                                <!-- Alarms Control -->
+                                <div class="alarm-control">
+                                    <p><b>Alarm</b></p>
+                                    <div class = "alarm-content">
+                                        <span class="material-icons-sharp">alarm</span>
+                                        <select id="alarm-hour" class="alarm-time-select">
+                                            <option value = "Hour" selected hidden>Hour</option>
+                                        </select>
+                                        <select id="alarm-minute" class="alarm-time-select">
+                                            <option value = "Minute" selected hidden>Minute</option>
+                                        </select>
+                                        <select id="alarm-period" class="alarm-time-select">
+                                            <option value = "AM/PM" selected hidden>AM/PM</option>
+                                        </select>
+                                    </div>
+                                    <select id="alarm-tone" class="alarm-tone-select">
+                                        <option value = "Tone" selected hidden>Tone</option>
+                                        <option value = "Tone 1">Tone 1</option>
+                                        <option value = "Tone 2">Tone 2</option>
+                                        <option value = "Tone 3">Tone 3</option>
+                                    </select>
+                                    <button id="set-alarm" class="alarm-btn">Set Alarm</button>
+                                </div>
+                                <!-- Alarms Control -->
 
                                 <hr class="divider">
                             </div>
@@ -314,6 +406,8 @@
                         
                     </div>
                     <script src="scripts/rooms.js"></script>
+                    <script src="scripts/bathroom.js"></script>
+                    <script src="scripts/bedrooms.js"></script>
                 </section>
                 <!---------------------- ROOMS ---------------------->
 
