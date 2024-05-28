@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="styles/rooms.css">
         <link rel="stylesheet" href="styles/bedrooms.css">
         <link rel="stylesheet" href="styles/bathroom.css">
+        <link rel="stylesheet" href="styles/living_room.css">
 
         <!-- Material Symbols -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
@@ -166,6 +167,67 @@
                                     <p><span class="material-icons-sharp">lightbulb</span>Lights: <span id="living-room-lights">On</span></p>
                                     <button class="control-btn" onclick="toggleLights('living-room')">Toggle Lights</button>
                                 </div>
+
+                                <hr class="divider">
+
+                                <!-- Entertainment System -->
+                                <div class="entertainment-system">
+                                    <h3>Entertainment System</h3>
+
+                                    <!-- TV Control -->
+                                    <div class="tv-control">
+                                        <p><span class="material-icons-sharp">tv</span>TV: <span id="tv-status-lr">Off</span></p>
+                                        <button class="control-btn" onclick="toggleTV('living-room')">Turn TV On</button>
+                                    </div>
+
+                                    <!-- TV Leds Control -->
+                                    <div class="tv-leds-control">
+                                        <span class="material-icons-sharp">tips_and_updates</span>
+                                        <p>TV Leds: </p>
+                                        <button class="tv-leds-red" id="tv-leds-red" title="Red">
+                                            <span class="material-icons-sharp">lens</span>
+                                        </button>
+                                        <button class="tv-leds-blue" id="tv-leds-blue" title="Blue">
+                                            <span class="material-icons-sharp">lens</span>
+                                        </button>
+                                        <button class="tv-leds-green" id="tv-leds-green" title="Green">
+                                            <span class="material-icons-sharp">lens</span>
+                                        </button>
+                                    </div>
+                                    <!-- TV Leds Control -->
+
+                                    <!-- Speaker Control -->
+                                    <div class="speaker-control">
+                                        <div class="first-row">
+                                            <p><span class="material-icons-sharp">speaker</span>Speaker: <span id="speaker-status-lr">Off</span></p>
+                                            <button class="control-btn" onclick="toggleSpeaker('living-room')">Turn Speaker On</button>
+                                        </div>
+                                        <div class="second-row">
+                                            <p>Volume: <span id="speaker-volume-value-lr">0</span></p>
+                                            <input type="range" id="speaker-volume-lr" class="volume-slider" name="speaker-volume-slider" min="0" max="100" value="0" disabled>
+                                        </div>
+                                    </div>
+                                    <!-- Speaker Control -->
+                                </div>
+                                <!-- Entertainment System -->
+
+                                <hr class="divider">
+
+                                <!-- Vacuum Control -->
+                                <div class="vacuum-control">
+                                    <h3><span class="material-icons-sharp">cleaning_services</span>Electric Vacuum</h3>
+                                    <div class="vacuum-content">
+                                        <p>Select time: </p>
+                                        <select id="vacuum-hour" class="vacuum-time-select">
+                                            <option value="Hour" selected hidden>Hour</option>
+                                        </select>
+                                        <select id="vacuum-minute" class="vacuum-time-select">
+                                            <option value="Minute" selected hidden>Minute</option>
+                                        </select>
+                                    </div>
+                                    <button id="set-vacuum-time" class="control-btn">Set Vacuum Time</button>
+                                </div>
+                                <!-- Vacuum Control -->
                             </div>
                         </div>
 
@@ -460,6 +522,7 @@
                     <script src="scripts/rooms.js"></script>
                     <script src="scripts/bathroom.js"></script>
                     <script src="scripts/bedrooms.js"></script>
+                    <script src="scripts/living_room.js"></script>
                 </section>
                 <!---------------------- ROOMS ---------------------->
 
@@ -468,6 +531,7 @@
                 <section id="security" class="content-section hidden">
                     <h1>Security</h1>
                     <!-- Security content -->
+                    <!-- smart plugs, window control-->
                 </section>
                 <!---------------------- SECURITY ---------------------->
 
