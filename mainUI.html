@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="styles/bedrooms.css">
         <link rel="stylesheet" href="styles/bathroom.css">
         <link rel="stylesheet" href="styles/living_room.css">
+        <link rel="stylesheet" href="styles/kitchen.css">
 
         <!-- Material Symbols -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
@@ -242,6 +243,55 @@
                                     <p><span class="material-icons-sharp">lightbulb</span>Lights: <span id="kitchen-lights">Off</span></p>
                                     <button class="control-btn" onclick="toggleLights('kitchen')">Toggle Lights</button>
                                 </div>
+
+                                <hr class="divider">
+
+                                <!-- Fridge and Freezer Section -->
+                                <h3>Appliances</h3>
+                                <div class="appliance-control">
+                                    <div class="appliance appliance-fridge">
+                                        <div class="image-container">
+                                            <img src="images/fridge.png" alt="Fridge">
+                                            <h100>Fridge</h100>
+                                        </div>
+                                        <p>Temp.: 
+                                            <button class="temp-btn" onclick="changeTemp('fridge', -1)">&#x25BC;</button>
+                                            <span id="fridge-temp">4°C</span>
+                                            <button class="temp-btn" onclick="changeTemp('fridge', 1)">&#x25B2;</button>
+                                        </p>
+                                        <p>Status: 
+                                            <span id="fridge-status">Closed</span>
+                                            <button class="status-btn" onclick="toggleStatus('fridge')">Toggle</button>
+                                        </p>
+                                    </div>
+                                    <div class="appliance appliance-freezer">
+                                        <div class="image-container">
+                                            <img src="images/freezer.png" alt="Freezer">
+                                            <h100>Freezer</h100>
+                                        </div>
+                                        <p>Temp.: 
+                                            <button class="temp-btn" onclick="changeTemp('freezer', -1)">&#x25BC;</button>
+                                            <span id="freezer-temp">-18°C</span>
+                                            <button class="temp-btn" onclick="changeTemp('freezer', 1)">&#x25B2;</button>
+                                        </p>
+                                        <p>Status: 
+                                            <span id="freezer-status">Closed</span>
+                                            <button class="status-btn" onclick="toggleStatus('freezer')">Toggle</button>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Fridge and Freezer Section -->
+
+                                <hr class="divider">
+
+                                <!-- Water Usage Information -->
+                                <div class="water-usage">
+                                    <h3><span class="material-icons-sharp">local_drink</span>Water Usage</h3>
+                                    <p>Water Used Today: <span id="water-used-today">50 liters</span></p>
+                                    <p>Water Used This Month: <span id="water-used-this-month">500 liters</span></p>
+                                    <p>Water Used This Year: <span id="water-used-this-year">5000 liters</span></p>
+                                </div>
+                                <!-- Water Usage Information -->
                             </div>
                         </div>
 
@@ -256,6 +306,9 @@
                                     <p><span class="material-icons-sharp">lightbulb</span>Lights: <span id="office-lights">On</span></p>
                                     <button class="control-btn" onclick="toggleLights('office')">Toggle Lights</button>
                                 </div>
+
+                                <hr class="divider">
+
                             </div>
                         </div>
 
@@ -523,6 +576,7 @@
                     <script src="scripts/bathroom.js"></script>
                     <script src="scripts/bedrooms.js"></script>
                     <script src="scripts/living_room.js"></script>
+                    <script src="scripts/kitchen.js"></script>
                 </section>
                 <!---------------------- ROOMS ---------------------->
 

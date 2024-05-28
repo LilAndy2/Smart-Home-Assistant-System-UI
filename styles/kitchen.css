@@ -1,0 +1,52 @@
+.appliance-control {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.appliance-fridge, .appliance-freezer {
+    width: 48%;
+    text-align: center;
+}
+
+.appliance-control p {
+    font-size: 13px;
+}
+
+.appliance-fridge img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 4px;
+}
+
+.appliance-freezer img {
+    width: 80px;
+    height: 125px;
+}
+
+h100 {
+    font-size: 20px;
+}
+
+.temp-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 2px 5px;
+    margin: 0 2px;
+    font-size: 10px;
+}
+
+.temp-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.status-btn {
+    background-color: #ff7014;
+    color: white;
+    padding: 2px 3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
