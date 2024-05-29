@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="styles/bathroom.css">
         <link rel="stylesheet" href="styles/living_room.css">
         <link rel="stylesheet" href="styles/kitchen.css">
+        <link rel="stylesheet" href="styles/office.css">
 
         <!-- Material Symbols -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
@@ -309,6 +310,61 @@
 
                                 <hr class="divider">
 
+                                <!-- Computer Status -->
+                                <div class="computer-status">
+                                    <h3>Computer</h3>
+                                    <div class="computer-control">
+                                        <p><span class="material-icons-sharp">computer</span>Computer: <span id="computer-status">Off</span></p>
+                                        <button class="control-btn" onclick="toggleComputer()">Toggle Computer</button>
+                                    </div>
+                                </div>
+                                <!-- Computer Status -->
+
+                                <!-- Computer Usage Section -->
+                                <div class="computer-usage">
+                                    <p><span class="material-icons-sharp">schedule</span>Computer Usage: </p>
+                                    <p>Time Spent Today: <span id="time-today">0h 0m</span></p>
+                                    <p>Time Spent This Week: <span id="time-week">0h 0m</span></p>
+                                </div>
+                                <!-- Computer Usage Section -->
+
+                                <!-- Computer Lights Control -->
+                                <div class="computer-lights-control">
+                                    <span class="material-icons-sharp">tips_and_updates</span>
+                                    <p>Computer Lights: </p>
+                                    <button class="computer-red" id="computer-red" title="Red">
+                                        <span class="material-icons-sharp">lens</span>
+                                    </button>
+                                    <button class="computer-blue" id="computer-blue" title="Blue">
+                                        <span class="material-icons-sharp">lens</span>
+                                    </button>
+                                    <button class="computer-green" id="computer-green" title="Green">
+                                        <span class="material-icons-sharp">lens</span>
+                                    </button>
+                                </div>
+                                <!-- Computer Lights Control -->
+
+                                <hr class="divider">
+
+                                <!-- Desk Lamp Control -->
+                                <div class="desk-lamp-office-control">
+                                    <p><span class="material-icons-sharp">highlight</span>Desk Lamp: <span id="desk-lamp-office-status">Off</span></p>
+                                    <button class="control-btn" onclick="toggleDeskLamp()">Toggle Desk Lamp</button>
+                                </div>
+                                <!-- Desk Lamp Control -->
+
+                                <!-- Floor Lamp Control -->
+                                <div class="floor-lamp-office-control">
+                                    <p><span class="material-icons-sharp">highlight</span>Floor Lamp: <span id="floor-lamp-status">Off</span></p>
+                                    <button class="control-btn" onclick="toggleFloorLamp()">Toggle Floor Lamp</button>
+                                </div>
+                                <!-- Floor Lamp Control -->
+
+                                <!-- Air Quality Monitor -->
+                                <div class="air-quality-monitor">
+                                    <p><span class="material-icons-sharp">air</span>Air Quality Index: <span id="air-quality-index">50</span></p>
+                                </div>
+                                <!-- Air Quality Monitor -->
                             </div>
                         </div>
 
@@ -577,6 +633,7 @@
                     <script src="scripts/bedrooms.js"></script>
                     <script src="scripts/living_room.js"></script>
                     <script src="scripts/kitchen.js"></script>
+                    <script src="scripts/office.js"></script>
                 </section>
                 <!---------------------- ROOMS ---------------------->
 

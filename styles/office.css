@@ -1,0 +1,60 @@
+.computer-control {
+    display: flex;
+}
+
+.computer-control button {
+    width: 120px;
+}
+
+.computer-lights-control {
+    display: flex;
+    margin-top: 22px;
+    margin-bottom: 5px;
+}
+
+.computer-lights-control button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-right: 5px;
+}
+  
+.computer-lights-control button:focus {
+    outline: none;
+}
+
+.computer-red .material-icons-sharp {
+    color: red;
+}
+  
+.computer-blue .material-icons-sharp {
+    color: blue;
+}
+  
+.computer-green .material-icons-sharp {
+    color: green;
+}
+
+.computer-lights-control p {
+    margin-right: 20px;
+}
+
+.computer-usage {
+    margin-top: 18px;
+}
+
+.desk-lamp-office-control button {
+    width: 120px;
+}
+
+.desk-lamp-office-control {
+    display: flex;
+}
+
+.floor-lamp-office-control button {
+    width: 120px;
+}
+
+.floor-lamp-office-control {
+    display: flex;
+}
