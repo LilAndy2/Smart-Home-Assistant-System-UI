@@ -1,0 +1,115 @@
+.spotify-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.spotify-player {
+    flex: 1;
+}
+
+.speaker-controls {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: white;
+    font-size: 17px;
+    width: 300px;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-right: 10px;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #ff7014;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider-label {
+    margin-left: 10px;
+}
+
+.speaker-controls h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.slider-label {
+    margin-left: 10px;
+}
+
+.volume-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #d3d3d3;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-bottom: 20px;
+}
+
+.volume-bar:hover {
+    opacity: 1;
+}
+
+.volume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #f86910;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-bar::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #f86910;
+    border-radius: 50%;
+    cursor: pointer;
+}

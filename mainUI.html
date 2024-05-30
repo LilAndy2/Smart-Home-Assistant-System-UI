@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="styles/rooms/living_room.css">
         <link rel="stylesheet" href="styles/rooms/kitchen.css">
         <link rel="stylesheet" href="styles/rooms/office.css">
+        <link rel="stylesheet" href="styles/leisure/spotify.css">
 
         <!-- Material Symbols -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
@@ -648,10 +649,50 @@
 
 
                 <!---------------------- LEISURE ---------------------->
-                <section id = "leisure" class = "content-section hidden">
+                <section id="leisure" class="content-section hidden">
                     <h1>Leisure</h1>
-                    <!-- Leisure content -->
+                    <div class="spotify-container">
+                        <div class="spotify-player">
+                            <!-- Spotify Widget -->
+                            <iframe 
+                                style="border-radius:12px" 
+                                src="https://open.spotify.com/embed/playlist/6OqwYkTMhoBYFwmqJnEuWD?utm_source=generator"
+                                width="80%" 
+                                height="360" 
+                                frameborder="0" 
+                                allowfullscreen="" 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                                loading="lazy">
+                            </iframe>
+                            <!-- Spotify Widget -->
+                        </div>
+                        <div class="speaker-controls">
+                            <h3>Speaker Control</h3>
+                            <label class="switch">
+                                <input type="checkbox" onchange="toggleSpeaker('living-room', this.checked)">
+                                <span class="slider"></span>
+                                <span class="slider-label">Living Room Speaker</span>
+                            </label>
+                            <input type="range" min="0" max="100" value="0" class="volume-bar" id="living-room-volume" disabled onchange="setVolume('living-room', this.value)">
+                            
+                            <label class="switch">
+                                <input type="checkbox" onchange="toggleSpeaker('bedroom-1', this.checked)">
+                                <span class="slider"></span>
+                                <span class="slider-label">Bedroom 1 Speaker</span>
+                            </label>
+                            <input type="range" min="0" max="100" value="0" class="volume-bar" id="bedroom-1-volume" disabled onchange="setVolume('bedroom-1', this.value)">
+                            
+                            <label class="switch">
+                                <input type="checkbox" onchange="toggleSpeaker('bedroom-2', this.checked)">
+                                <span class="slider"></span>
+                                <span class="slider-label">Bedroom 2 Speaker</span>
+                            </label>
+                            <input type="range" min="0" max="100" value="0" class="volume-bar" id="bedroom-2-volume" disabled onchange="setVolume('bedroom-2', this.value)">
+                        </div>
+                    </div>
                 </section>
+                
+                <script src="scripts/leisure/spotify.js"></script>
                 <!---------------------- LEISURE ---------------------->
 
 
