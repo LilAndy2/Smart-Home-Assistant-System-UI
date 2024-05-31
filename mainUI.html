@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="styles/rooms/kitchen.css">
         <link rel="stylesheet" href="styles/rooms/office.css">
         <link rel="stylesheet" href="styles/leisure/spotify.css">
+        <link rel="stylesheet" href="styles/settings/settings.css">
 
         <!-- Material Symbols -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
@@ -768,8 +769,46 @@
                 <!---------------------- SETTINGS ---------------------->
                 <section id="settings" class="content-section hidden">
                     <h1>Settings</h1>
-                    <!-- Settings content -->
+                
+                    <div class="profile-settings">
+                        <h2>Profile</h2>
+                        <label for="profile-pic">Profile Picture:</label>
+                        <input type="file" id="profile-pic" name="profile-pic">
+                        <button id="change-profile-pic">Change Profile Picture</button>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username">
+                        <button id="change-username">Change Username</button>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                
+                    <div class="notification-settings">
+                        <h2>Notification</h2>
+                        <div class="switch-label-wrapper">
+                            <label class="switch-1">
+                                <input type="checkbox" id="email-notifications">
+                                <span class="slider-1"></span>
+                            </label>
+                            <span class="slider-label-1">Email Notifications</span>
+                        </div>
+                        <div class="switch-label-wrapper">
+                            <label class="switch-1">
+                                <input type="checkbox" id="push-notifications">
+                                <span class="slider-1"></span>
+                            </label>
+                            <span class="slider-label-1">Push Notifications</span>
+                        </div>
+                    </div>
+                
+                    <div class="connected-accounts">
+                        <h2>Social Media</h2>
+                        <button id="connect-facebook" data-url="https://www.facebook.com/login" data-username="FacebookUser">Connect Facebook</button>
+                        <button id="connect-twitter" data-url="https://twitter.com/login" data-username="TwitterUser">Connect Twitter</button>
+                        <button id="connect-instagram" data-url="https://www.instagram.com/accounts/login" data-username="InstagramUser">Connect Instagram</button>
+                    </div>
                 </section>
+
+                <script src="scripts/settings/settings.js"></script>
                 <!---------------------- SETTINGS ---------------------->
             </main>
             
@@ -792,13 +831,13 @@
 
                     <div class="profile">
                         <div class="info">
-                            <p>Hey, <b>Andrei</b></p>
+                            <p>Hey, <b id="right-username">Andrei</b></p>
                             <small class = "text-muted>">Admin</small>
                         </div>
                     </div>
 
                     <div class="profile-photo">
-                        <img src="images/profile-photo.jpg">
+                        <img id="right-profile-photo" src="images/profile-photo.jpg">
                     </div>
                 </div>
             </div>
