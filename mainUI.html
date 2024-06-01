@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="styles/rooms/office.css">
         <link rel="stylesheet" href="styles/leisure/spotify.css">
         <link rel="stylesheet" href="styles/settings/settings.css">
+        <link rel="stylesheet" href="styles/activities/notes.css">
 
         <!-- Material Symbols -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
@@ -707,54 +708,69 @@
 
 
                 <!---------------------- ACTIVITIES ---------------------->
-                <section id = "activities" class = "content-section hidden">
+                <section id="activities" class="content-section hidden">
                     <h1>Activities</h1>
                     
                     <!-- TASK SCHEDULER -->
                     <div class="task-scheduler">
-                        <div class = "task-form">
+                        <div class="task-form">
                             <h1>Task Scheduler</h1>
-                            <input type = "text" id = "task" placeholder = "Enter task...">
-                            <select id = "priority">
-                                <option value = "top">Top Priority</option>
-                                <option value = "middle">Middle Priority</option>
-                                <option value = "low">Less Priority</option>
+                            <input type="text" id="task" placeholder="Enter task...">
+                            <select id="priority">
+                                <option value="top">Top Priority</option>
+                                <option value="middle">Middle Priority</option>
+                                <option value="low">Less Priority</option>
                             </select>
-                            <input type = "date" id = "deadline">
-                            <button id = "add-task">Add Task</button>
+                            <input type="date" id="deadline">
+                            <button id="add-task">Add Task</button>
                         </div>
-                        <div class = "task-list" id = "task-list">
+                        <div class="task-list" id="task-list">
                             <!-- Tasks will be added here dynamically -->
                         </div>
                     </div>
                     <!-- TASK SCHEDULER -->
-
-                    <!-- CALENDAR VIEW -->
-                    <div class = "wrapper">
-                        <header>
-                          <p class = "current-date"></p>
-                          <div class = "icons">
-                            <span id = "prev" class = "material-icons-sharp">chevron_left</span>
-                            <span id = "next" class = "material-icons-sharp">chevron_right</span>
-                          </div>
-                        </header>
-                        <div class = "calendar">
-                          <ul class = "weeks">
-                            <li>Sun</li>
-                            <li>Mon</li>
-                            <li>Tue</li>
-                            <li>Wed</li>
-                            <li>Thu</li>
-                            <li>Fri</li>
-                            <li>Sat</li>
-                          </ul>
-                          <ul class = "days"></ul>
+                
+                    <!-- CALENDAR AND NOTES -->
+                    <div class="calendar-notes-container">
+                        <!-- CALENDAR VIEW -->
+                        <div class="wrapper">
+                            <header>
+                                <p class="current-date"></p>
+                                <div class="icons">
+                                    <span id="prev" class="material-icons-sharp">chevron_left</span>
+                                    <span id="next" class="material-icons-sharp">chevron_right</span>
+                                </div>
+                            </header>
+                            <div class="calendar">
+                                <ul class="weeks">
+                                    <li>Sun</li>
+                                    <li>Mon</li>
+                                    <li>Tue</li>
+                                    <li>Wed</li>
+                                    <li>Thu</li>
+                                    <li>Fri</li>
+                                    <li>Sat</li>
+                                </ul>
+                                <ul class="days"></ul>
+                            </div>
                         </div>
+                        <!-- CALENDAR VIEW -->
+                
+                        <!-- NOTES/JOURNAL -->
+                        <div class="notes-journal">
+                            <h1>Notes</h1>
+                            <textarea id="notes" placeholder="Write your notes here..."></textarea>
+                            <button id="save-notes">Save Notes</button>
+                            <div id="notes-list">
+                                <!-- Saved notes will be displayed here -->
+                            </div>
+                        </div>
+                        <!-- NOTES/JOURNAL -->
                     </div>
-                    <script src="scripts/activities/task_scheduler_calendar.js" defer></script>
-                    <!-- CALENDAR VIEW -->
-
                 </section>
+                
+                <script src="scripts/activities/task_scheduler_calendar.js" defer></script>
+                <script src="scripts/activities/notes.js"></script>
                 <!---------------------- ACTIVITIES ---------------------->
 
 
