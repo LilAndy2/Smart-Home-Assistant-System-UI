@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="styles/settings/settings.css">
         <link rel="stylesheet" href="styles/activities/notes.css">
         <link rel="stylesheet" href="styles/dashboard/freinds.css">
+        <link rel="stylesheet" href="styles/security/security.css">
 
         <!-- Material Symbols -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
@@ -657,9 +658,67 @@
                 <!---------------------- SECURITY ---------------------->
                 <section id="security" class="content-section hidden">
                     <h1>Security</h1>
-                    <!-- Security content -->
-                    <!-- smart plugs, window control-->
+                
+                    <!-- Smart Plugs Control -->
+                    <div class="smart-plugs-control">
+                        <h2>Smart Plugs</h2>
+                        <div class="smart-plug" id="smart-plug-1">
+                            <span>Living Room Plug</span>
+                            <button class="toggle-plug" onclick="toggleSmartPlug(1)">Toggle</button>
+                            <span class="plug-status" id="smart-plug-status-1">Off</span>
+                        </div>
+                        <div class="smart-plug" id="smart-plug-2">
+                            <span>Kitchen Plug</span>
+                            <button class="toggle-plug" onclick="toggleSmartPlug(2)">Toggle</button>
+                            <span class="plug-status" id="smart-plug-status-2">Off</span>
+                        </div>
+                    </div>
+                
+                    <!-- Window Control -->
+                    <div class="window-control">
+                        <h2>Window Control</h2>
+                        <div class="window" id="window-1">
+                            <span>Living Room Window</span>
+                            <button class="toggle-window" onclick="toggleWindow(1)">Open/Close</button>
+                            <span class="window-status" id="window-status-1">Closed</span>
+                        </div>
+                        <div class="window" id="window-2">
+                            <span>Bedroom 1 Window</span>
+                            <button class="toggle-window" onclick="toggleWindow(2)">Open/Close</button>
+                            <span class="window-status" id="window-status-2">Closed</span>
+                        </div>
+                        <div class="window" id="window-3">
+                            <span>Bedroom 2 Window</span>
+                            <button class="toggle-window" onclick="toggleWindow(3)">Open/Close</button>
+                            <span class="window-status" id="window-status-3">Closed</span>
+                        </div>
+                    </div>
+                
+                    <!-- Security Cameras -->
+                    <div class="security-cameras">
+                        <h2>Security Cameras</h2>
+                        <div class="camera" id="camera-1">
+                            <h3>Front Door</h3>
+                            <video id="camera-feed-1" controls>
+                                <!-- Video feed goes here -->
+                            </video>
+                            <button onclick="snapshotCamera(1)">Snapshot</button>
+                        </div>
+                        <!-- Add more cameras as needed -->
+                    </div>
+                
+                    <!-- Alarm System -->
+                    <div class="alarm-system">
+                        <h2>Alarm System</h2>
+                        <span class="alarm-status" id="alarm-status">Disarmed</span>
+                        <button onclick="toggleAlarm()">Arm/Disarm</button>
+                    </div>
+                
+                    <!-- More security features as needed -->
+                
+                    <script src="./scripts/security/security.js"></script>
                 </section>
+                
                 <!---------------------- SECURITY ---------------------->
 
 

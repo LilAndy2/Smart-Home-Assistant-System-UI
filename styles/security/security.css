@@ -1,0 +1,110 @@
+/* General Styles for Security Section */
+#security {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#security h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Smart Plugs Control Styles */
+.smart-plugs-control,
+.window-control,
+.security-cameras,
+.alarm-system {
+    margin-bottom: 15px;
+}
+
+.smart-plugs-control h2,
+.window-control h2,
+.security-cameras h2,
+.alarm-system h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.smart-plug,
+.window,
+.camera {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.smart-plug span,
+.window span,
+.camera h3 {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.smart-plug button,
+.window button,
+.camera button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #ff7014;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.smart-plug button:hover,
+.window button:hover,
+.camera button:hover {
+    background-color: #f8670d;
+}
+
+.smart-plug .plug-status,
+.window .window-status {
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Security Cameras Styles */
+.camera video {
+    width: 200px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+/* Alarm System Styles */
+.alarm-system {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alarm-system .alarm-status {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.alarm-system button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.alarm-system button:hover {
+    background-color: #c82333;
+}
