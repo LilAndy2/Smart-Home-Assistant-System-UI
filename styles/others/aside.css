@@ -92,7 +92,6 @@ aside .sidebar a.active:before {
 }
 
 aside .sidebar a.active span {
-    color: #ff7014;
     margin-left: calc(1rem - 3px);
 }
 
