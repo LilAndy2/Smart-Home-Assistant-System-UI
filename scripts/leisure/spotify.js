@@ -7,13 +7,35 @@ const speakerStates = {
 
 // Mock function to simulate enabling/disabling a speaker
 function enableRoomSpeaker(room) {
-    console.log(`Speaker in ${room} has been enabled.`);
-    // Implement actual logic to enable the speaker here, e.g., an API call
+    // Create a new notification
+    const timestamp = new Date().toLocaleTimeString();
+    const notificationMessage = `The speaker in the ${room} has been turned on.`;
+    const notification = {
+        message: notificationMessage,
+        timestamp: timestamp
+    };
+
+    // Add notification to localStorage
+    saveNotification(notification);
+
+    // Add notification to the UI
+    addNotificationToUI(notification, true);
 }
 
 function disableRoomSpeaker(room) {
-    console.log(`Speaker in ${room} has been disabled.`);
-    // Implement actual logic to disable the speaker here, e.g., an API call
+    // Create a new notification
+    const timestamp = new Date().toLocaleTimeString();
+    const notificationMessage = `The speaker in the ${room} has been turned off.`;
+    const notification = {
+        message: notificationMessage,
+        timestamp: timestamp
+    };
+
+    // Add notification to localStorage
+    saveNotification(notification);
+
+    // Add notification to the UI
+    addNotificationToUI(notification, true);
 }
 
 // Function called when a toggle switch is changed
@@ -40,4 +62,58 @@ function setVolume(room, volume) {
     }
     console.log(`Volume for ${room} set to ${volume}`);
     // Implement actual logic to set the speaker volume here, e.g., an API call
+}
+
+function saveNotification(notification) {
+    let notifications = JSON.parse(localStorage.getItem('notifications')) || [];
+    notifications.unshift(notification);
+    localStorage.setItem('notifications', JSON.stringify(notifications));
+}
+
+function loadNotifications() {
+    let notifications = JSON.parse(localStorage.getItem('notifications')) || [];
+    notifications.forEach(notification => addNotificationToUI(notification, false));
+    updateMessageCount(notifications.length);
+}
+
+function addNotificationToUI(notification, updateCount) {
+    const notificationList = document.querySelector('.notification-list');
+    const notificationElement = document.createElement('div');
+    notificationElement.className = 'notification-item';
+
+    notificationElement.innerHTML = `
+        <p class="notification-message">${notification.message}</p>
+        <span class="notification-timestamp">${notification.timestamp}</span>
+        <button class="delete-notification">
+            <span class="material-icons-sharp">close</span>
+        </button>
+    `;
+
+    // Add delete functionality to the notification
+    notificationElement.querySelector('.delete-notification').addEventListener('click', function() {
+        notificationElement.remove();
+        removeNotification(notification);
+        updateMessageCount(-1);
+    });
+
+    // Insert the notification at the top of the list
+    notificationList.insertBefore(notificationElement, notificationList.firstChild);
+
+    if (updateCount) {
+        // Update message count
+        updateMessageCount(1);
+    }
+}
+
+function removeNotification(notification) {
+    let notifications = JSON.parse(localStorage.getItem('notifications')) || [];
+    notifications = notifications.filter(n => n.message !== notification.message || n.timestamp !== notification.timestamp);
+    localStorage.setItem('notifications', JSON.stringify(notifications));
+}
+
+function updateMessageCount(change) {
+    const messageCount = document.querySelector('.message-count');
+    let count = parseInt(messageCount.textContent);
+    count += change;
+    messageCount.textContent = count;
 }

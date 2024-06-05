@@ -1,24 +1,68 @@
 document.getElementById('curtains-open-1').addEventListener('click', function() {
     setTimeout(() => {
-        alert('Curtains have been opened in Bedroom 1');
+        const timestamp = new Date().toLocaleTimeString();
+        const notificationMessage = `Curtains have been opened in Bedroom 1.`;
+        const notification = {
+            message: notificationMessage,
+            timestamp: timestamp
+        };
+    
+        // Add notification to localStorage
+        saveNotification(notification);
+    
+        // Add notification to the UI
+        addNotificationToUI(notification, true);
     }, 20000);
 });
 
 document.getElementById('curtains-close-1').addEventListener('click', function() {
     setTimeout(() => {
-        alert('Curtains have been closed in Bedroom 1');
+        const timestamp = new Date().toLocaleTimeString();
+        const notificationMessage = `Curtains have been closed in Bedroom 1.`;
+        const notification = {
+            message: notificationMessage,
+            timestamp: timestamp
+        };
+    
+        // Add notification to localStorage
+        saveNotification(notification);
+    
+        // Add notification to the UI
+        addNotificationToUI(notification, true);
     }, 20000);
 });
 
 document.getElementById('curtains-open-2').addEventListener('click', function() {
     setTimeout(() => {
-        alert('Curtains have been opened in Bedroom 2');
+        const timestamp = new Date().toLocaleTimeString();
+        const notificationMessage = `Curtains have been opened in Bedroom 2.`;
+        const notification = {
+            message: notificationMessage,
+            timestamp: timestamp
+        };
+    
+        // Add notification to localStorage
+        saveNotification(notification);
+    
+        // Add notification to the UI
+        addNotificationToUI(notification, true);
     }, 20000);
 });
 
 document.getElementById('curtains-close-2').addEventListener('click', function() {
     setTimeout(() => {
-        alert('Curtains have been closed in Bedroom 2');
+        const timestamp = new Date().toLocaleTimeString();
+        const notificationMessage = `Curtains have been closed in Bedroom 2.`;
+        const notification = {
+            message: notificationMessage,
+            timestamp: timestamp
+        };
+    
+        // Add notification to localStorage
+        saveNotification(notification);
+    
+        // Add notification to the UI
+        addNotificationToUI(notification, true);
     }, 20000);
 });
 
@@ -72,6 +116,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     fanOnBtn.addEventListener("click", function() {
         fanStatusText.innerText = "Fan is ON. Speed: " + fanSpeedSlider.value;
+
+        const timestamp = new Date().toLocaleTimeString();
+        const notificationMessage = `The fan has been turned on in Bedroom 1.`;
+        const notification = {
+            message: notificationMessage,
+            timestamp: timestamp
+        };
+    
+        // Add notification to localStorage
+        saveNotification(notification);
+    
+        // Add notification to the UI
+        addNotificationToUI(notification, true);
     });
 
     fanSpeedSlider.addEventListener("input", function() {
@@ -80,6 +137,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     fanOffBtn.addEventListener("click", function() {
         fanStatusText.innerText = "Fan is OFF";
+
+        const timestamp = new Date().toLocaleTimeString();
+        const notificationMessage = `The fan has been turned off in Bedroom 1.`;
+        const notification = {
+            message: notificationMessage,
+            timestamp: timestamp
+        };
+    
+        // Add notification to localStorage
+        saveNotification(notification);
+    
+        // Add notification to the UI
+        addNotificationToUI(notification, true);
     });
 });
 /* FAN */
@@ -140,6 +210,19 @@ bedLightControlBtn.addEventListener("click", function() {
     bedLightOn = !bedLightOn;
     bedLightStatus.textContent = bedLightOn ? "On" : "Off";
     bedLightControlBtn.textContent = bedLightOn ? "Turn Bed Light Off" : "Turn Bed Light On";
+
+    const timestamp = new Date().toLocaleTimeString();
+    const notificationMessage = `The bed light has been turned ${bedLightOn ? "on" : "off"} in Bedroom 2.`;
+    const notification = {
+        message: notificationMessage,
+        timestamp: timestamp
+    };
+    
+    // Add notification to localStorage
+    saveNotification(notification);
+    
+    // Add notification to the UI
+    addNotificationToUI(notification, true);
 });
 /* BED LIGHT */
 
@@ -152,6 +235,19 @@ tvControlBtn1.addEventListener("click", function() {
     tvOn1 = !tvOn1;
     tvStatus1.textContent = tvOn1 ? "On" : "Off";
     tvControlBtn1.textContent = tvOn1 ? "Turn TV Off" : "Turn TV On";
+
+    const timestamp = new Date().toLocaleTimeString();
+    const notificationMessage = `The TV has been turned ${tvOn1 ? "on" : "off"} in Bedroom 1.`;
+    const notification = {
+        message: notificationMessage,
+        timestamp: timestamp
+    };
+    
+    // Add notification to localStorage
+    saveNotification(notification);
+    
+    // Add notification to the UI
+    addNotificationToUI(notification, true);
 });
 
 const tvStatus2 = document.getElementById("tv-status-2");
@@ -162,5 +258,72 @@ tvControlBtn2.addEventListener("click", function() {
     tvOn2 = !tvOn2;
     tvStatus2.textContent = tvOn2 ? "On" : "Off";
     tvControlBtn2.textContent = tvOn2 ? "Turn TV Off" : "Turn TV On";
+
+    const timestamp = new Date().toLocaleTimeString();
+    const notificationMessage = `The TV has been turned ${tvOn2 ? "on" : "off"} in Bedroom 2.`;
+    const notification = {
+        message: notificationMessage,
+        timestamp: timestamp
+    };
+    
+    // Add notification to localStorage
+    saveNotification(notification);
+    
+    // Add notification to the UI
+    addNotificationToUI(notification, true);
 });
 /* TV */
+
+function saveNotification(notification) {
+    let notifications = JSON.parse(localStorage.getItem('notifications')) || [];
+    notifications.unshift(notification);
+    localStorage.setItem('notifications', JSON.stringify(notifications));
+}
+
+function loadNotifications() {
+    let notifications = JSON.parse(localStorage.getItem('notifications')) || [];
+    notifications.forEach(notification => addNotificationToUI(notification, false));
+    updateMessageCount(notifications.length);
+}
+
+function addNotificationToUI(notification, updateCount) {
+    const notificationList = document.querySelector('.notification-list');
+    const notificationElement = document.createElement('div');
+    notificationElement.className = 'notification-item';
+
+    notificationElement.innerHTML = `
+        <p class="notification-message">${notification.message}</p>
+        <span class="notification-timestamp">${notification.timestamp}</span>
+        <button class="delete-notification">
+            <span class="material-icons-sharp">close</span>
+        </button>
+    `;
+
+    // Add delete functionality to the notification
+    notificationElement.querySelector('.delete-notification').addEventListener('click', function() {
+        notificationElement.remove();
+        removeNotification(notification);
+        updateMessageCount(-1);
+    });
+
+    // Insert the notification at the top of the list
+    notificationList.insertBefore(notificationElement, notificationList.firstChild);
+
+    if (updateCount) {
+        // Update message count
+        updateMessageCount(1);
+    }
+}
+
+function removeNotification(notification) {
+    let notifications = JSON.parse(localStorage.getItem('notifications')) || [];
+    notifications = notifications.filter(n => n.message !== notification.message || n.timestamp !== notification.timestamp);
+    localStorage.setItem('notifications', JSON.stringify(notifications));
+}
+
+function updateMessageCount(change) {
+    const messageCount = document.querySelector('.message-count');
+    let count = parseInt(messageCount.textContent);
+    count += change;
+    messageCount.textContent = count;
+}
