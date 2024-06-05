@@ -7,19 +7,26 @@ a {
     text-decoration: none;
 }
 
-h3 {
+body.light-theme h3 {
     color: #000000;
-    font-size: 1.5rem; /* Increase font size */
+    font-size: 1.5rem;
 }
 
-aside .top .logo-container h2 {
+body.dark-theme h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+body.light-theme aside .top .logo-container h2 {
     margin-top: 0.3rem;
-    font-size: 1.7rem; /* Increase font size */
+    font-size: 1.7rem;
+    color: black;
 }
 
-.material-symbols-sharp {
-    color: #000000;
-    font-size: 2.5rem; /* Increase font size */
+body.dark-theme aside .top .logo-container h2 {
+    margin-top: 0.3rem;
+    font-size: 1.7rem;
+    color: white;
 }
 
 aside {
@@ -36,12 +43,12 @@ aside .top {
 
 aside .logo-container {
     display: flex;
-    gap: 1rem; /* Increase gap */
+    gap: 1rem;
 }
 
 aside .logo-container img {
-    width: 3rem; /* Increase image size */
-    height: 3rem; /* Increase image size */
+    width: 3rem;
+    height: 3rem;
 }
 
 aside .close {
@@ -58,7 +65,7 @@ aside .sidebar {
 
 aside h3 {
     font-weight: 500;
-    font-size: 1.5rem; /* Increase font size */
+    font-size: 1.5rem;
 }
 
 aside .sidebar a {
@@ -68,13 +75,21 @@ aside .sidebar a {
     gap: 1rem;
     align-items: center;
     position: relative;
-    height: 5rem; /* Increase height */
+    height: 5rem;
     transition: all 300ms ease;
-    font-size: 1.7rem; /* Increase font size */
+    font-size: 1.7rem;
+}
+
+body.light-theme aside .sidebar a span {
+    color: #000000;
+}
+
+body.dark-theme aside .sidebar a span {
+    color: #ffffff;
 }
 
 aside .sidebar a span {
-    font-size: 1.7rem; /* Increase font size */
+    font-size: 1.7rem;
     transition: all 300ms ease;
 }
 
@@ -86,7 +101,7 @@ aside .sidebar a.active {
 
 aside .sidebar a.active:before {
     content: "";
-    width: 8px; /* Increase width */
+    width: 8px;
     height: 100%;
     background: #ff7014;
 }
@@ -100,14 +115,14 @@ aside .sidebar a:hover {
 }
 
 aside .sidebar a:hover span {
-    margin-left: 1.2rem; /* Increase margin left */
+    margin-left: 1.2rem;
 }
 
 aside .sidebar .message-count {
     background : #ff7014;
     color: black;
-    padding: 3px 10px; /* Increase padding */
-    font-size: 14px; /* Increase font size */
-    border-radius: 12px; /* Increase border radius */
+    padding: 3px 10px;
+    font-size: 14px;
+    border-radius: 12px;
 }
 /************************************************* Sidebar *************************************************/

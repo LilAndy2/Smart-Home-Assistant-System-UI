@@ -12,10 +12,13 @@
     font-family: "Poppins", sans-serif;
 }
 
-html {
+html.light-theme {
     background: lightgray;
 }
 
+html.dark-theme {
+    background: rgb(36, 36, 36);
+}
 
 /************************************************* Main Screen *************************************************/
 main {
@@ -36,7 +39,7 @@ main .time-weather-container > div {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container {
+body.light-theme .container {
     display: grid;
     width: 96%;
     margin: 0 auto;
@@ -45,8 +48,23 @@ main .time-weather-container > div {
     background: lightgray;
 }
 
-h1 {
+body.dark-theme .container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8 rem;
+    grid-template-columns: 14rem auto 23rem;
+    background: rgb(36, 36, 36);
+}
+
+body.light-theme h1 {
     font-size: 3rem;
+    color: black;
+}
+
+body.dark-theme h1 {
+    font-size: 3rem;
+    color: white;
 }
 
 .hidden {
