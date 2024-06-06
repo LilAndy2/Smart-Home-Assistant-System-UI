@@ -1,20 +1,46 @@
 /* TIME WIDGET */
-.live-time-container h2 {
+body.light-theme .live-time-container h2 {
     font-size: 2em;
     margin-bottom: 10px;
+    color: black;
 }
 
-#live-time-clock {
+body.dark-theme .live-time-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+body.light-theme #live-time-clock {
     font-size: 2.5em;
     margin-bottom: 5px;
+    color: black;
 }
 
-#live-day {
+body.dark-theme #live-time-clock {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    color: white;
+}
+
+body.light-theme #live-day {
     font-size: 1.5em;
+    color: black;
 }
 
-#live-date {
+body.dark-theme #live-day {
+    font-size: 1.5em;
+    color: white;
+}
+
+body.light-theme #live-date {
     margin-bottom: 10px;
+    color: black;
+}
+
+body.dark-theme #live-date {
+    margin-bottom: 10px;
+    color: white;
 }
 
 body {
@@ -22,7 +48,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.live-time-container {
+body.light-theme .live-time-container {
     text-align: center;
     margin-top: 20px;
     background-size: cover;
@@ -38,17 +64,46 @@ body {
     justify-content: center;
     align-items: center;
     font-size: large;
+    background-color: white;
+}
+
+body.dark-theme .live-time-container {
+    text-align: center;
+    margin-top: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    background-color: rgb(72, 72, 72);
 }
 
 .time-zones {
     display: flex;
 }
 
-.time-zone {
+body.light-theme .time-zone {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 10px; 
+    margin: 0 10px;
+    color: black;
+}
+
+body.dark-theme .time-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    color: white;
 }
 
 .time-zone h3 {

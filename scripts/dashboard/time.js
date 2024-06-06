@@ -2,26 +2,6 @@
 function updateLiveTime() {
     const currentTime = new Date();
     const hours = currentTime.getHours();
-    // Background is always white
-    const container = document.querySelector('.live-time-container');
-    container.style.backgroundColor = 'white';
-
-    // Text color is always black
-    const cityNames = document.querySelectorAll('.time-zone h3');
-    cityNames.forEach(city => {
-        city.style.color = 'black';
-    });
-
-    const otherText = document.querySelectorAll('.live-time-container h2, #live-time-clock, #live-day, #live-date');
-    otherText.forEach(text => {
-        text.style.color = 'black';
-    });
-
-    const timeZoneHours = document.querySelectorAll('.time-zone div');
-    timeZoneHours.forEach(hour => {
-        hour.style.color = 'black';
-    });
-
     const minutes = currentTime.getMinutes();
     const seconds = currentTime.getSeconds();
     const formattedTime = `${hours}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;

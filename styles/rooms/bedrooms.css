@@ -41,6 +41,14 @@
     margin-right: 20px;
 }
 
+body.light-theme .alarm-content span {
+    color: black;
+}
+
+body.dark-theme .alarm-content span {
+    color: white;
+}
+
 .alarm-time-select {
     font-size: 1em;
     padding: 5px;

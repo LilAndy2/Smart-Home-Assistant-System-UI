@@ -22,7 +22,7 @@
     gap: 20px;
 }
 
-.room-widget {
+body.light-theme .room-widget {
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
@@ -32,12 +32,36 @@
     font-size: 17px;
 }
 
-.room-widget h2 {
-    margin-bottom: 10px;
+body.dark-theme .room-widget {
+    border: 1px solid rgb(72,72,72);
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(30% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: rgb(72,72,72);
+    font-size: 17px;
 }
 
-.room-info p {
+body.light-theme .room-widget h2 {
+    margin-bottom: 10px;
+    color: black;
+}
+
+body.dark-theme .room-widget h2 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+body.light-theme .room-info p {
     margin: 10px 0;
+    color: black;
+    margin-right: 10px;
+}
+
+body.dark-theme .room-info p {
+    margin: 10px 0;
+    color: white;
+    margin-right: 10px;
 }
 
 .light-control {
