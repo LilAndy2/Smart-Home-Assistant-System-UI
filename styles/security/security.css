@@ -17,17 +17,27 @@
     margin-bottom: 15px;
 }
 
-.smart-plugs-control h2,
-.window-control h2,
-.security-cameras h2,
-.alarm-system h2 {
+body.light-theme .smart-plugs-control h2,
+body.light-theme .window-control h2,
+body.light-theme .security-cameras h2,
+body.light-theme .alarm-system h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: black;
 }
 
-.smart-plug,
-.window,
-.camera {
+body.dark-theme .smart-plugs-control h2,
+body.dark-theme .window-control h2,
+body.dark-theme .security-cameras h2,
+body.dark-theme .alarm-system h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+body.light-theme .smart-plug,
+body.light-theme .window,
+body.light-theme .camera {
     background-color: #fff;
     padding: 15px;
     border-radius: 8px;
@@ -38,12 +48,35 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.smart-plug span,
-.window span,
-.camera h3 {
+body.dark-theme .smart-plug,
+body.dark-theme .window,
+body.dark-theme .camera {
+    background-color: rgb(72, 72, 72);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .smart-plug span,
+body.light-theme .window span,
+body.light-theme .camera h3 {
     flex: 1;
     font-size: 18px;
     font-weight: 500;
+    color: black;
+}
+
+body.dark-theme .smart-plug span,
+body.dark-theme .window span,
+body.dark-theme .camera h3 {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
 }
 
 .smart-plug button,
@@ -88,10 +121,18 @@
     justify-content: space-between;
 }
 
-.alarm-system .alarm-status {
+body.light-theme .alarm-system .alarm-status {
     font-size: 20px;
     font-weight: 600;
     margin-right: 20px;
+    color: black;
+}
+
+body.dark-theme .alarm-system .alarm-status {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+    color: white;
 }
 
 .alarm-system button {

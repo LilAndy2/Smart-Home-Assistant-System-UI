@@ -6,7 +6,7 @@
     height: 400px;
 }
 
-.wrapper {
+body.light-theme .wrapper {
     flex: 1;
     min-width: 300px;
     background-color: #f9f9f9;
@@ -15,12 +15,29 @@
     border-radius: 5px;
 }
 
-.notes-journal {
+body.dark-theme .wrapper {
     flex: 1;
     min-width: 300px;
-    background-color: #f9f9f9;
+    background-color: rgb(72, 72, 72);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+body.light-theme .notes-journal {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
     padding: 20px;
     border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+body.dark-theme .notes-journal {
+    flex: 1;
+    min-width: 300px;
+    background-color: rgb(72, 72, 72);
+    padding: 20px;
     border-radius: 5px;
     margin-top: 20px;
 }
@@ -30,13 +47,26 @@
     margin-bottom: 10px;
 }
 
-.notes-journal textarea {
+body.light-theme .notes-journal textarea {
     width: 100%;
     height: 100px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
+    background-color: white;
+    color: black;
+}
+
+body.dark-theme .notes-journal textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(72, 72, 72);
+    color: white;
 }
 
 .notes-journal button {
@@ -56,7 +86,7 @@
     margin-top: 20px;
 }
 
-.note-item {
+body.light-theme .note-item {
     background-color: #ffffff;
     padding: 10px;
     border: 1px solid #ddd;
@@ -65,8 +95,23 @@
     position: relative;
 }
 
-.note-item .note-text {
+body.dark-theme .note-item {
+    background-color: rgb(72, 72, 72);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+body.light-theme .note-item .note-text {
     margin: 0;
+    color: black;
+}
+
+body.dark-theme .note-item .note-text {
+    margin: 0;
+    color: white;
 }
 
 .note-item .note-actions {

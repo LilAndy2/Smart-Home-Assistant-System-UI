@@ -1,33 +1,66 @@
 /* Profile Settings */
-.profile-settings,
-.notification-settings,
-.connected-accounts {
+body.light-theme .profile-settings,
+body.light-theme .notification-settings,
+body.light-theme .connected-accounts {
     margin-bottom: 30px;
     background: white;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background: white;
     font-size: 17px;
     width: 100%;
 }
 
-.profile-settings label,
-.notification-settings label {
+body.dark-theme .profile-settings,
+body.dark-theme .notification-settings,
+body.dark-theme .connected-accounts {
+    margin-bottom: 30px;
+    background: rgb(72, 72, 72);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+    width: 100%;
+}
+
+body.light-theme .profile-settings label,
+body.light-theme .notification-settings label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: black;
 }
 
-.profile-settings input[type="file"],
-.profile-settings input[type="text"],
-.profile-settings input[type="email"] {
+body.dark-theme .profile-settings label,
+body.dark-theme .notification-settings label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+body.light-theme .profile-settings input[type="file"],
+body.light-theme .profile-settings input[type="text"],
+body.light-theme .profile-settings input[type="email"] {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    background-color: white;
+    color: black;
+}
+
+body.dark-theme .profile-settings input[type="file"],
+body.dark-theme .profile-settings input[type="text"],
+body.dark-theme .profile-settings input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgb(72, 72, 72);
+    color: white;
 }
 
 .profile-settings input[type="file"] {
@@ -94,7 +127,7 @@
     height: 0;
 }
 
-.slider-1 {
+body.light-theme .slider-1 {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -102,6 +135,18 @@
     right: 0;
     bottom: 0;
     background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+body.dark-theme .slider-1 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(36, 36, 36);
     transition: .4s;
     border-radius: 34px;
 }
@@ -126,9 +171,16 @@ input:checked + .slider-1:before {
     transform: translateX(26px);
 }
 
-.slider-label-1 {
+body.light-theme .slider-label-1 {
     vertical-align: middle;
     margin-left: 10px;
+    color: black;
+}
+
+body.dark-theme .slider-label-1 {
+    vertical-align: middle;
+    margin-left: 10px;
+    color: white;
 }
 
 /* Button Styles */
@@ -163,3 +215,14 @@ input:checked + .slider-1:before {
     height: 20px;
 }
 
+body.light-theme .profile-settings h2,
+body.light-theme .notification-settings h2,
+body.light-theme .connected-accounts h2 {
+    color: black;
+}
+
+body.dark-theme .profile-settings h2,
+body.dark-theme .notification-settings h2,
+body.dark-theme .connected-accounts h2 {
+    color: white;
+}

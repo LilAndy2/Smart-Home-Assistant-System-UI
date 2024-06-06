@@ -50,7 +50,14 @@
     text-align: right;
 }
 
-.right .top .profile .info {
+body.light-theme .right .top .profile .info {
     font-size: 1.2rem;
     margin-top: 0.3rem;
+    color: black;
+}
+
+body.dark-theme .right .top .profile .info {
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+    color: white;
 }

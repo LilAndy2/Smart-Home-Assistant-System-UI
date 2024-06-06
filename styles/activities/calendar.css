@@ -38,9 +38,16 @@ header .icons span:hover{
   background: #f2f2f2;
 }
 
-header .current-date{
+body.light-theme header .current-date{
   font-size: 1.45rem;
   font-weight: 500;
+  color: black;
+}
+
+body.dark-theme header .current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: white;
 }
 
 .calendar{
@@ -64,23 +71,41 @@ header .current-date{
   font-size: 1.07rem;
 }
 
-.calendar .weeks li{
+body.light-theme .calendar .weeks li{
   font-weight: 500;
   cursor: default;
+  color: black;
 }
 
-.calendar .days li{
+body.dark-theme .calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+  color: white;
+}
+
+body.light-theme .calendar .days li{
   z-index: 1;
   cursor: pointer;
   position: relative;
   margin-top: 30px;
+  color: black
 }
 
-.days li.inactive{
+body.dark-theme .calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+  color: white;
+}
+
+body.light-theme .days li.inactive,
+body.dark-theme .days li.inactive{
   color: #aaa;
 }
 
-.days li.active{
+body.light-theme .days li.active,
+body.dark-theme .days li.active{
   color: #fff;
 }
 
@@ -104,7 +129,7 @@ header .current-date{
   background: #f2f2f2;
 }
 
-.days li.has-task::after {
+body.light-theme .days li.has-task::after {
     content: "";
     display: block;
     width: 5px;
@@ -113,4 +138,15 @@ header .current-date{
     border-radius: 50%;
     margin: 0 auto;
     margin-top: 5px;
+}
+
+body.dark-theme .days li.has-task::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 5px;
 }

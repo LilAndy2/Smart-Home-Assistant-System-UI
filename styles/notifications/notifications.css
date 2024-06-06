@@ -1,4 +1,4 @@
-.notification-item {
+body.light-theme .notification-item {
     padding: 10px;
     margin: 5px 0;
     background-color: #f0f0f0;
@@ -6,13 +6,31 @@
     position: relative;
 }
 
-.notification-message {
-    margin: 0;
+body.dark-theme .notification-item {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: rgb(72, 72, 72);
+    position: relative;
 }
 
-.notification-timestamp {
+body.light-theme .notification-message {
+    margin: 0;
+    color: black;
+}
+
+body.dark-theme .notification-message {
+    margin: 0;
+    color: white;
+}
+
+body.light-theme .notification-timestamp {
     font-size: 0.8em;
     color: #666;
+}
+
+body.dark-theme .notification-timestamp {
+    font-size: 0.8em;
+    color: #777777;
 }
 
 .delete-notification {

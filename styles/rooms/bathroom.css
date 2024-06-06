@@ -1,11 +1,12 @@
 .washing-machine-usage {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 38px;
+    margin-bottom: 32px;
 }
 
 .washing-machine-usage .material-icons-sharp {
-    font-size: 24px; /* Adjust the font size as needed */
+    font-size: 24px;
 }
 
 .washing-controls {
@@ -19,9 +20,16 @@
     margin-left: auto;
 }
 
-.controls-line {
+body.light-theme .controls-line {
     display: flex;
     align-items: center;
+    color: black;
+}
+
+body.dark-theme .controls-line {
+    display: flex;
+    align-items: center;
+    color: white;
 }
 
 .controls-line button {
@@ -42,12 +50,20 @@
     margin-right: 10px;
 }
 
-.divider {
+body.light-theme .divider {
     border: 0;
     height: 2px;
     background: black;
     margin: 20px 0;
 }
+
+body.dark-theme .divider {
+    border: 0;
+    height: 2px;
+    background: white;
+    margin: 20px 0;
+}
+
 .large {
     font-size: 36px;
 }
@@ -66,8 +82,14 @@
     text-align: center;
 }
 
-.usage-icon span {
+body.light-theme .usage-icon span {
     font-size: 48px;
+    color: black;
+}
+
+body.dark-theme .usage-icon span {
+    font-size: 48px;
+    color: white;
 }
 
 .usage-icon p {

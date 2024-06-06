@@ -18,10 +18,24 @@ task-form {
     width: 100%;
 }
 
-.task-form input, .task-form select, .task-form button {
+body.light-theme .task-form input, 
+body.light-theme .task-form select, 
+body.light-theme .task-form button {
     padding: 10px;
     margin: 10px;
     font-size: 16px;
+    background-color: white;
+    color: black;
+}
+
+body.dark-theme .task-form input, 
+body.dark-theme .task-form select, 
+body.dark-theme .task-form button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: rgb(72, 72, 72);
+    color: white;
 }
 
 .task-list {
@@ -40,9 +54,16 @@ task-form {
     transition: all 0.5s ease;
 }
 
-.task p {
+body.light-theme .task p {
     margin: 0;
     padding: 5px;
+    color: black;
+}
+
+body.dark-theme .task p {
+    margin: 0;
+    padding: 5px;
+    color: white;
 }
 
 .task button {
@@ -53,9 +74,18 @@ task-form {
     cursor: pointer;
 }
 
-.task-scheduler {
+body.light-theme .task-scheduler {
     padding: 20px;
     background: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+}
+
+body.dark-theme .task-scheduler {
+    padding: 20px;
+    background: rgb(72, 72, 72);
     border-radius: 10px;
     width: 100%;
     height: 300px;
