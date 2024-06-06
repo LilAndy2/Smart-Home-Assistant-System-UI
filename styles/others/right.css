@@ -61,3 +61,18 @@ body.dark-theme .right .top .profile .info {
     margin-top: 0.3rem;
     color: white;
 }
+
+.voice-assistant-btn {
+    background-color: #ff7014;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 235px;
+    margin-left: 40px;
+    height: 40px;
+    margin-top: 8px;
+    font-size: 15px;
+    display: flex;
+}
